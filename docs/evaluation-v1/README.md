@@ -30,3 +30,5 @@ Some early DOM snapshots retained older accessible heading names, and EV14/EV16 
 ## Authorship boundary
 
 This package is AI-authored technical work for Step4. The assignment PDF p5 permits AI assistance except Learning Log authorship and requires Step6 examples/answers without AI assistance. No learning-log.md, personal learning narrative or Step6 answers have been written. The student must independently inspect the prototype and form/write their own evaluation and reflection. This package does not complete the whole assignment or Step5.
+
+Baseline hashes record working-copy bytes and canonical LF text separately. Git archive can normalize tracked text line endings; that conversion is not a V1 source edit. Raw browser evidence is preserved byte-for-byte with scoped Git attributes.
