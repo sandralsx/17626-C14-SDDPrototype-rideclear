@@ -1,0 +1,20 @@
+[
+  {
+    "source": "S",
+    "archive_name": "HW2_shuxinl2.zip",
+    "archive_sha256": "e327cd49ff3a8120cc4ab30ebd6536f5928b7e59e6bfa06a4ddabf8a812104be",
+    "combined_goal_count": 39
+  },
+  {
+    "source": "J",
+    "archive_name": "HW2_jiashend.zip",
+    "archive_sha256": "5b7ea3cca276a13e35070aa489a4017181e403c71657d11f99fe08edcbed6ae4",
+    "combined_goal_count": 81
+  },
+  {
+    "source": "Q",
+    "archive_name": "hw2(1).zip",
+    "archive_sha256": "5a4699ba84b58bd474a77079ab3f228e123d7a1a26c7cec6f5cf7bc30a7da121",
+    "combined_goal_count": 90
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "pair": "main text",
+    "ratio": 10.73,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "pair": "muted text",
+    "ratio": 5.98,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "pair": "primary button",
+    "ratio": 6.69,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "pair": "warning text",
+    "ratio": 6.37,
+    "minimum": 4.5,
+    "pass": true
+  },
+  {
+    "pair": "input/button boundary",
+    "ratio": 3.6,
+    "minimum": 3,
+    "pass": true
+  },
+  {
+    "pair": "focus ring",
+    "ratio": 5.96,
+    "minimum": 3,
+    "pass": true
+  }
+]
