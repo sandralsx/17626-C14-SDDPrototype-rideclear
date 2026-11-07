@@ -1,0 +1,11 @@
+﻿evidence_id,file,csv_record,timestamp,speaker,checked_excerpt
+SJ31,sources/evidence/transcript-261028-0806.csv,31,2026-10-27T14:03:08.818Z,Janelle,"The system should show the scheduled pickup window, live vehicle status, and an updated ETA"
+SJ34,sources/evidence/transcript-261028-0806.csv,34,2026-10-27T14:04:06.720Z,Janelle,"The biggest improvement would be reliable, accurate pickup information"
+SJ21,sources/evidence/transcript-261028-0806.csv,21,2026-10-27T14:00:39.816Z,Janelle,They should send me an update before the pickup window expires
+SJ21-contact,sources/evidence/transcript-261028-0806.csv,21,2026-10-27T14:00:39.816Z,Janelle,I need a way to contact dispatch or report that the new time
+SJ23,sources/evidence/transcript-261028-0806.csv,23,2026-10-27T14:01:17.258Z,Janelle,"I call dispatch, usually after waiting on hold."
+SF31,sources/evidence/transcript-261028-0806 (1).csv,31,2026-10-28T09:18:24.415Z,Frank,working from different versions
+SF25,sources/evidence/transcript-261028-0806 (1).csv,25,2026-10-28T09:17:02.911Z,Frank,preferred channel
+SD25,sources/evidence/transcript-261028-0806 (2).csv,25,2026-10-28T09:31:53.662Z,Diane,customer-facing system meets WCAG 2.1 AA standards
+SJ14,sources/evidence/transcript-261028-0806.csv,14,2026-10-27T13:59:32.222Z,Janelle,my return ride was over 40 minutes late
+SF36,sources/evidence/transcript-261028-0806 (1).csv,36,2026-10-28T09:20:36.472Z,Frank,nobody's guessing whether the message got through

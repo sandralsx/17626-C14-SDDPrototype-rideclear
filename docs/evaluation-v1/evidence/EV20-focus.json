@@ -1,0 +1,13 @@
+{
+  "sequence": "Clicked Rider, pressed Tab four times to ack-N7, then Return",
+  "before": {
+    "id": "ack-N7",
+    "tag": "BUTTON",
+    "text": "Acknowledge this update"
+  },
+  "after": {
+    "id": "",
+    "tag": "BODY",
+    "text": "[body]"
+  }
+}

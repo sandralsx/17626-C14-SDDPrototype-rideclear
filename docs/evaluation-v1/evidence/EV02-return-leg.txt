@@ -1,0 +1,74 @@
+- link "Skip to trip information":
+  - /url: "#main"
+- banner:
+  - link "RideClear home":
+    - /url: ./
+    - text: RideClear
+    - generic: Your ride, clearly.
+  - group "Demo view":
+    - button "Rider view" [pressed]
+    - button "Dispatch view"
+  - generic: Prototype V1
+- strong: Demo service
+- generic: Fictional trips · simulated messages · no real ride changes
+- main:
+  - paragraph: SATURDAY, NOVEMBER 7
+  - heading "Your rides today" [level=1]
+  - paragraph: Know your pickup time. Stay informed if it changes.
+  - generic: Demo service time · Eastern
+  - strong: 8:45 AM
+  - navigation "Today's trip legs":
+    - button "Outbound Riverside Community Center 9:00 AM – 9:20 AM Within pickup window":
+      - text: Outbound
+      - generic: ↗
+      - generic: Riverside Community Center
+      - generic: 9:00 AM – 9:20 AM
+      - generic: Within pickup window
+    - button "Return Maple Street home 5:00 PM – 5:30 PM Within pickup window" [active] [pressed]:
+      - text: Return
+      - generic: ↙
+      - generic: Maple Street home
+      - generic: 5:00 PM – 5:30 PM
+      - generic: Within pickup window
+  - region "Your pickup details":
+    - paragraph: RETURN PICKUP
+    - heading "Your pickup details" [level=2]
+    - generic: RC-105
+    - generic: Pickup
+    - strong: Riverside Community Center
+    - generic: Destination
+    - strong: Maple Street home
+    - generic: Original scheduled pickup window
+    - strong: 5:00 PM – 5:30 PM
+    - generic: Latest estimated arrival
+    - strong: 5:15 PM
+    - generic: Within pickup window
+    - paragraph: The current estimate is within your scheduled pickup window.
+    - text: Vehicle
+    - strong: Accessible van 18
+    - text: Vehicle status
+    - strong: Scheduled
+    - separator
+    - paragraph:
+      - text: Estimate updated at
+      - strong: 8:40 AM
+      - text: · Eastern
+      - text: Both the estimate and the service time are simulated.
+  - region "Trip updates":
+    - heading "Trip updates" [level=2]
+    - generic: "0"
+    - strong: No trip updates yet.
+    - paragraph: A change to your pickup information will appear here. You can always check the latest estimate.
+  - region "Need a different plan?":
+    - heading "Need a different plan?" [level=2]
+    - paragraph: If the revised time will not work, let dispatch know. This does not change your ride automatically.
+    - generic: Message to dispatch
+    - textbox "Message to dispatch"
+    - generic: 1–500 characters · for your return trip
+    - button "Send demo request"
+  - generic "Demo controls & sample scenarios"
+- status
+- contentinfo:
+  - generic: RideClear / A3 V1
+  - generic: Same-browser shared demo · revision 0
+  - generic: Estimates are simulated, not a pickup guarantee.

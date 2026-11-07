@@ -1,0 +1,131 @@
+Browser tab: 5, Title: "RideClear · Prototype V1", URL: "https://rideclear-a3-v1-shuxin-20261107.tomato-star.chatgpt.site/".
+1 AXWebArea RideClear · Prototype V1, URL: rideclear-a3-v1-shuxin-20261107.tomato-star.chatgpt.site/
+	2 link Description: Skip to trip information, Value: rideclear-a3-v1-shuxin-20261107.tomato-star.chatgpt.site/#main
+	3 container
+		4 link Description: RideClear home, Value: rideclear-a3-v1-shuxin-20261107.tomato-star.chatgpt.site/
+		5 container Demo view
+			6 checkbox Rider view, Value: 1, ID: view-rider
+			7 checkbox Dispatch view, Value: 0, ID: view-dispatch
+		8 text Prototype V1
+	9 text Demo service
+	10 text Fictional trips · simulated messages · no real ride changes
+	11 container main
+		12 text SATURDAY, NOVEMBER 7
+		13 heading Your rides today, Value: 1, ID: page-title
+			14 text Your rides today
+		15 text Know your pickup time. Stay informed if it changes.
+		16 text Demo service time · Eastern
+		17 text 5:35 PM
+		18 container Today's trip legs
+			19 text TODAY'S TRIPS
+			20 container trip-list
+				21 checkbox Outbound Riverside Community Center 9:00 AM – 9:20 AM Within pickup window, Value: 0, ID: leg-outbound
+					22 text Outbound
+					23 text Riverside Community Center
+					24 text 9:00 AM – 9:20 AM
+					25 text Within pickup window
+				26 checkbox Return Maple Street home 5:00 PM – 5:30 PM Pickup delayed, Value: 1, ID: leg-return
+					27 text Return
+					28 text Maple Street home
+					29 text 5:00 PM – 5:30 PM
+					30 text Pickup delayed
+			31 text One day. Two directions.
+			32 text Your original pickup window stays visible, even when an estimate changes.
+		33 container content
+			34 container Your pickup details
+				35 text RETURN PICKUP
+				36 heading Your pickup details, Value: 2, ID: pickup-heading
+					37 text Your pickup details
+				38 text RC-105
+				39 container
+					40 text Pickup
+					41 text Riverside Community Center
+					42 text Destination
+					43 text Maple Street home
+				44 text Original scheduled pickup window
+				45 text 5:00 PM – 5:30 PM
+				46 text Latest estimated arrival
+				47 text 6:15 PM
+				48 text Pickup delayed
+				49 text Later than your original pickup window. See the latest notice below.
+				50 text Vehicle
+				51 text Accessible van 18
+				52 text Vehicle status
+				53 text On the way
+				54 container
+					55 text Estimate updated at  5:35 PM  · Eastern
+					56 text Both the estimate and the service time are simulated.
+			57 container Trip updates
+				58 heading Trip updates, Value: 2, ID: notices-heading
+					59 text Trip updates
+				60 text 7
+				61 container
+					62 text Sent 5:35 PM
+					63 heading Your pickup is delayed, Value: 3
+						64 text Your pickup is delayed
+					65 text Return trip · Estimated arrival 6:15 PM.
+					66 text Original window 5:00 PM – 5:30 PM. Early-notice miss: this delay was identified after the opportunity to notify before the window ended. Phone · simulated channel
+					67 text Sent · not yet delivered
+				68 container
+					69 text Acknowledged 5:35 PM
+					70 heading Your pickup information has changed, Value: 3
+						71 text Your pickup information has changed
+					72 text Return trip · Estimated arrival 6:05 PM.
+					73 text Original window 5:00 PM – 5:30 PM. Phone · simulated channel
+					74 text Acknowledged
+				75 container
+					76 text Sent 5:35 PM
+					77 heading Your pickup is delayed, Value: 3
+						78 text Your pickup is delayed
+					79 text Return trip · Estimated arrival 6:05 PM.
+					80 text Original window 5:00 PM – 5:30 PM. Early-notice miss: this delay was identified after the opportunity to notify before the window ended. Email · simulated channel
+					81 text Sent · not yet delivered
+				82 container
+					83 text Sent 5:35 PM
+					84 heading Your arrival estimate is unavailable, Value: 3
+						85 text Your arrival estimate is unavailable
+					86 text Return trip · No estimate is available.
+					87 text Original window 5:00 PM – 5:30 PM. Email · simulated channel
+					88 text Sent · not yet delivered
+				89 container
+					90 text Sent 5:35 PM
+					91 heading Your estimate is back within the window, Value: 3
+						92 text Your estimate is back within the window
+					93 text Return trip · Estimated arrival 5:20 PM.
+					94 text Original window 5:00 PM – 5:30 PM. Email · simulated channel
+					95 text Sent · not yet delivered
+				96 container
+					97 text Sent 5:35 PM
+					98 heading Your pickup is delayed, Value: 3
+						99 text Your pickup is delayed
+					100 text Return trip · Estimated arrival 5:55 PM.
+					101 text Original window 5:00 PM – 5:30 PM. Early-notice miss: this delay was identified after the opportunity to notify before the window ended. Email · simulated channel
+					102 text Sent · not yet delivered
+				103 container
+					104 text Acknowledged 4:50 PM
+					105 heading Your pickup is delayed, Value: 3
+						106 text Your pickup is delayed
+					107 text Return trip · Estimated arrival 5:45 PM.
+					108 text Original window 5:00 PM – 5:30 PM. Identified before the pickup window ended. Delivery and acknowledgement are recorded separately. Email · simulated channel
+					109 text Acknowledged
+			110 container Need a different plan?
+				111 heading Need a different plan?, Value: 2, ID: contact-heading
+					112 text Need a different plan?
+				113 text If the revised time will not work, let dispatch know. This does not change your ride automatically.
+				114 container contact-form
+					115 text Message to dispatch
+					116 text entry area (settable) Message to dispatch, ID: contact-message
+					117 text 1–500 characters · for your return trip
+					118 button Send demo request, ID: contact-submit
+				119 container
+					120 text Reviewed by dispatch · R2
+					121 text Sent at 5:35 PM · ETA snapshot 5:45 PM.
+					122 text No schedule change has been approved.
+		123 button (collapsed) Demo controls & sample scenarios, Secondary Actions: Expand
+			124 text Demo controls & sample scenarios
+	125 container
+		126 text RideClear / A3 V1
+		127 text Same-browser shared demo · revision 22
+		128 text Estimates are simulated, not a pickup guarantee.
+
+The focused UI element is 1 AXWebArea RideClear · Prototype V1, URL: rideclear-a3-v1-shuxin-20261107.tomato-star.chatgpt.site/

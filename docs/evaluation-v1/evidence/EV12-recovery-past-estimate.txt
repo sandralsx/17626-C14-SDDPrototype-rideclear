@@ -1,0 +1,107 @@
+- link "Skip to trip information":
+  - /url: "#main"
+- banner:
+  - link "RideClear home":
+    - /url: ./
+    - text: RideClear
+    - generic: Your ride, clearly.
+  - group "Demo view":
+    - button "Rider view" [active] [pressed]
+    - button "Dispatch view"
+  - generic: Prototype V1
+- strong: Demo service
+- generic: Fictional trips · simulated messages · no real ride changes
+- main:
+  - paragraph: SATURDAY, NOVEMBER 7
+  - heading "Keep riders informed" [level=1]: Your rides today
+  - paragraph: Know your pickup time. Stay informed if it changes.
+  - generic: Demo service time · Eastern
+  - strong: 5:35 PM
+  - navigation "Today's trip legs":
+    - button "Outbound Riverside Community Center 9:00 AM – 9:20 AM Within pickup window":
+      - text: Outbound
+      - generic: ↗
+      - generic: Riverside Community Center
+      - generic: 9:00 AM – 9:20 AM
+      - generic: Within pickup window
+    - button "Return Maple Street home 5:00 PM – 5:30 PM Within pickup window" [pressed]:
+      - text: Return
+      - generic: ↙
+      - generic: Maple Street home
+      - generic: 5:00 PM – 5:30 PM
+      - generic: Within pickup window
+  - region "Your pickup details":
+    - paragraph: RETURN PICKUP
+    - heading "Your pickup details" [level=2]
+    - generic: RC-105
+    - generic: Pickup
+    - strong: Riverside Community Center
+    - generic: Destination
+    - strong: Maple Street home
+    - generic: Original scheduled pickup window
+    - strong: 5:00 PM – 5:30 PM
+    - generic: Latest estimated arrival
+    - strong: 5:20 PM
+    - generic: Within pickup window
+    - paragraph: The current estimate is within your scheduled pickup window.
+    - text: Vehicle
+    - strong: Accessible van 18
+    - text: Vehicle status
+    - strong: On the way
+    - separator
+    - paragraph:
+      - text: Estimate updated at
+      - strong: 5:35 PM
+      - text: · Eastern
+      - text: Both the estimate and the service time are simulated.
+  - region "Trip updates":
+    - heading "Trip updates" [level=2]
+    - generic: "3"
+    - article:
+      - generic: Sent
+      - generic: 5:35 PM
+      - heading "Your estimate is back within the window" [level=3]
+      - paragraph:
+        - text: Return trip · Estimated arrival 5:20 PM.
+        - text: Original window 5:00 PM – 5:30 PM.
+      - paragraph:
+        - text: Email · simulated channel
+        - text: Sent · not yet delivered
+    - article:
+      - generic: Sent
+      - generic: 5:35 PM
+      - heading "Your pickup is delayed" [level=3]
+      - paragraph:
+        - text: Return trip · Estimated arrival 5:55 PM.
+        - text: Original window 5:00 PM – 5:30 PM.
+      - paragraph: "Early-notice miss: this delay was identified after the opportunity to notify before the window ended."
+      - paragraph:
+        - text: Email · simulated channel
+        - text: Sent · not yet delivered
+    - article:
+      - generic: Acknowledged
+      - generic: 4:50 PM
+      - heading "Your pickup is delayed" [level=3]
+      - paragraph:
+        - text: Return trip · Estimated arrival 5:45 PM.
+        - text: Original window 5:00 PM – 5:30 PM.
+      - paragraph: Identified before the pickup window ended. Delivery and acknowledgement are recorded separately.
+      - paragraph:
+        - text: Email · simulated channel
+        - text: Acknowledged
+  - region "Need a different plan?":
+    - heading "Need a different plan?" [level=2]
+    - paragraph: If the revised time will not work, let dispatch know. This does not change your ride automatically.
+    - generic: Message to dispatch
+    - textbox "Message to dispatch"
+    - generic: 1–500 characters · for your return trip
+    - button "Send demo request"
+    - strong: Reviewed by dispatch · R2
+    - text: Sent at 5:35 PM · ETA snapshot 5:45 PM.
+    - text: No schedule change has been approved.
+  - generic "Demo controls & sample scenarios"
+- status: Pickup information saved. Any new notice is visible in the communication record.
+- contentinfo:
+  - generic: RideClear / A3 V1
+  - generic: Same-browser shared demo · revision 11
+  - generic: Estimates are simulated, not a pickup guarantee.

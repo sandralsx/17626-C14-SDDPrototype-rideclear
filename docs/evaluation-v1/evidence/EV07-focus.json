@@ -1,0 +1,12 @@
+{
+  "before": {
+    "id": "view-rider",
+    "tag": "BUTTON"
+  },
+  "after": {
+    "activeText": "\n  Skip to trip information\n  \n    \n      \n      RideClearYour ride, clearly.\n  ",
+    "id": "",
+    "tag": "BODY"
+  },
+  "action": "Keyboard Return on ack-N1"
+}

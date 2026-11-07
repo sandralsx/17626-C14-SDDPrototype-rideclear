@@ -1,6 +1,6 @@
 # RideClear - 17-626 Assignment 3
 
-**Current stage: Prototype V1 / Step 3.** Trip Status, ETA and Delay Communication,
+**Current stage: V1 technical evaluation / Step 4.** Trip Status, ETA and Delay Communication,
 based on three team members' HW2 models and checked Shuxin HW1 evidence.
 
 ## Deliverable links
@@ -8,10 +8,10 @@ based on three team members' HW2 models and checked Shuxin HW1 evidence.
 | Component | Current state |
 | --- | --- |
 | GitHub Version 1 | [v1 preserved version](https://github.com/sandralsx/17626-a3-rideclear/tree/v1). |
-| GitHub Version 2 | Not created; awaits actual V1 evaluation and specification revision. |
+| GitHub Version 2 | Not created; V1 evaluation is recorded, and specification revision awaits Step 5. |
 | Prototype V1 URL | [Open Prototype V1](https://rideclear-a3-v1-shuxin-20261107.tomato-star.chatgpt.site) · deployed and public for grading. |
 | Prototype V2 URL | Not deployed. V1 will remain separate. |
-| Requirements Analysis and Learning Log | [Goal model and decisions](docs/goal-model.md), [V1 spec](specs/001-trip-status/spec.md), [implementation map](docs/implementation-map.md). Student-authored learning-log.md remains to be written independently. |
+| Requirements Analysis and Learning Log | [Goal model and decisions](docs/goal-model.md), [V1 spec](specs/001-trip-status/spec.md), [V1 RTM](docs/traceability-v1.md), [Step 4 technical evaluation](docs/evaluation-v1/README.md). Student-authored learning-log.md remains to be written independently. |
 
 The demo was deployed successfully and opened in the browser. After the user explicitly
 authorized public demo access, its access policy was changed to public on 2026-11-07.
@@ -20,6 +20,10 @@ preservation state before that later access-only change; application code is unc
 
 The final assignment requires all five actual links when V2 and the independent
 Learning Log exist. This stage does not invent missing final-deliverable URLs.
+
+## Step 4 evaluation
+
+[RTM](docs/traceability-v1.md) traces all eight selected requirements from checked interviews through goals, spec IDs and immutable V1 code to actual evidence and satisfaction. [Findings](docs/evaluation-v1/findings.md): one implementation defect (acknowledgement focus loss), two requirements issues (elapsed/stale ETA semantics and early discovery versus timely delivery). [Execution record](docs/evaluation-v1/test-execution.md) states observed passes and unverified checks. Existing tests:17 passed. These are AI-authored technical records, not the independent student Learning Log. V1 remains frozen; no V2 changes have been made.
 
 ## Prototype
 

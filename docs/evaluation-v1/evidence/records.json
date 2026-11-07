@@ -1,0 +1,183 @@
+[
+  {
+    "id": "EV01-initial-outbound",
+    "actualObserved": "Observed existing normal outbound 09:00–09:20 window, 09:10 ETA, 08:40 as-of, revision 0.",
+    "snapshot": "evidence/EV01-initial-outbound.txt"
+  },
+  {
+    "id": "EV02-return-leg",
+    "actualObserved": "Selected Return. Original 17:00–17:30 window and 17:15 ETA are distinct from outbound.",
+    "snapshot": "evidence/EV02-return-leg.txt"
+  },
+  {
+    "id": "EV03-window-end-equality",
+    "actions": "At clock 16:50, saved Return ETA 17:30 and en-route status. Equality is within window; inspect communication count.",
+    "recordedAt": "2026-11-07T22:25:05.944Z",
+    "snapshot": "evidence/EV03-window-end-equality.txt"
+  },
+  {
+    "id": "EV04-early-delay",
+    "actions": "Changed preferred channel to Email; saved Return ETA 17:45 at 16:50, with no driver acceptance.",
+    "recordedAt": "2026-11-07T22:25:30.387Z",
+    "snapshot": "evidence/EV04-early-delay.txt"
+  },
+  {
+    "id": "EV05-identical-no-op",
+    "actions": "Submitted unchanged ETA/status again; inspect unchanged revision and notice count.",
+    "recordedAt": "2026-11-07T22:25:48.797Z",
+    "snapshot": "evidence/EV05-identical-no-op.txt"
+  },
+  {
+    "id": "EV06-delivery-after-window",
+    "actions": "Created delay at 16:50, advanced clock to 17:35, then marked N1 delivered. Inspect early-discovery text and actual delivery timing.",
+    "recordedAt": "2026-11-07T22:25:51.303Z",
+    "snapshot": "evidence/EV06-delivery-after-window.txt",
+    "screenshot": "evidence/EV06-delivery-after-window.jpg"
+  },
+  {
+    "id": "EV07-keyboard-ack-focus",
+    "actions": "Activated Acknowledge this update with Return. Recorded resulting outcome and activeElement in EV07-focus.json.",
+    "recordedAt": "2026-11-07T22:26:11.493Z",
+    "snapshot": "evidence/EV07-keyboard-ack-focus.txt",
+    "screenshot": "evidence/EV07-keyboard-ack-focus.jpg"
+  },
+  {
+    "id": "EV08-blank-contact",
+    "actions": "Submitted an empty contact message; inspected field error and absence of a receipt.",
+    "recordedAt": "2026-11-07T22:26:43.455Z",
+    "snapshot": "evidence/EV08-blank-contact.txt"
+  },
+  {
+    "id": "EV09-contact-receipt",
+    "actions": "Submitted a valid Return contact request; inspect request ID, ETA snapshot and unchanged schedule.",
+    "recordedAt": "2026-11-07T22:26:44.192Z",
+    "snapshot": "evidence/EV09-contact-receipt.txt"
+  },
+  {
+    "id": "EV10-review-without-reschedule",
+    "actions": "Marked contact request R2 reviewed; inspect unchanged ETA/window and reviewed-only status.",
+    "recordedAt": "2026-11-07T22:27:15.643Z",
+    "snapshot": "evidence/EV10-review-without-reschedule.txt"
+  },
+  {
+    "id": "EV11-changed-delay-history",
+    "actions": "Changed delayed ETA from 17:45 to 17:55; inspect new notice and preserved original 17:45 history.",
+    "recordedAt": "2026-11-07T22:27:16.433Z",
+    "snapshot": "evidence/EV11-changed-delay-history.txt"
+  },
+  {
+    "id": "EV12-recovery-past-estimate",
+    "actions": "At demo clock 17:35, changed ETA to 17:20 within the saved 17:00–17:30 window; inspect recovery and whether elapsed ETA is qualified.",
+    "recordedAt": "2026-11-07T22:27:17.615Z",
+    "snapshot": "evidence/EV12-recovery-past-estimate.txt",
+    "screenshot": "evidence/EV12-recovery-past-estimate.jpg"
+  },
+  {
+    "id": "EV13-unknown-eta",
+    "actions": "Cleared ETA and saved; inspected unavailable state and history.",
+    "recordedAt": "2026-11-07T22:29:47.622Z",
+    "snapshot": "evidence/EV13-unknown-eta.txt"
+  },
+  {
+    "id": "EV14-terminal-status",
+    "actions": "Saved arrived status with ETA 18:00; inspect terminal status instead of predicted delay.",
+    "recordedAt": "2026-11-07T22:29:58.400Z",
+    "snapshot": "evidence/EV14-terminal-status.txt"
+  },
+  {
+    "id": "EV15-acceptance-required",
+    "actions": "Attempted accepted-change notice with driver acceptance unchecked.",
+    "recordedAt": "2026-11-07T22:30:02.439Z",
+    "snapshot": "evidence/EV15-acceptance-required.txt"
+  },
+  {
+    "id": "EV16-accepted-change",
+    "actions": "Checked driver acceptance and submitted accepted-change notice.",
+    "recordedAt": "2026-11-07T22:30:04.478Z",
+    "snapshot": "evidence/EV16-accepted-change.txt"
+  },
+  {
+    "id": "EV17-change-confirmed",
+    "actions": "Fresh accessibility tree confirms N7 accepted-change notice, N6 late delay, original N1 separate delivery/ack times, revision15.",
+    "recordedAt": "2026-11-07T22:30:19.957Z",
+    "snapshot": "evidence/EV17-change-confirmed.txt",
+    "capture": "fresh native accessibility tree"
+  },
+  {
+    "id": "EV18-unreachable",
+    "actions": "Marked accepted-change N7 unreachable; inspect failure and explicit human follow-up.",
+    "recordedAt": "2026-11-07T22:30:21.204Z",
+    "snapshot": "evidence/EV18-unreachable.txt",
+    "capture": "fresh native accessibility tree"
+  },
+  {
+    "id": "EV19-retry-current-channel",
+    "actions": "Retried N7 after changing preference to Phone; original Email unreachable attempt retained, new Phone attempt sent.",
+    "recordedAt": "2026-11-07T22:30:32.369Z",
+    "snapshot": "evidence/EV19-retry-current-channel.txt",
+    "capture": "fresh native accessibility tree"
+  },
+  {
+    "id": "EV20-keyboard-focus-confirmed",
+    "actions": "Keyboard Tab sequence focused ack-N7; Return acknowledged and focus dropped to BODY. See EV20-focus.json.",
+    "recordedAt": "2026-11-07T22:30:55.515Z",
+    "snapshot": "evidence/EV20-keyboard-focus-confirmed.txt",
+    "capture": "fresh native accessibility tree"
+  },
+  {
+    "id": "EV21-terminal-confirmed",
+    "actions": "Saved arrived with ETA18:10; inspect terminal state and existing notice count.",
+    "recordedAt": "2026-11-07T22:30:59.579Z",
+    "snapshot": "evidence/EV21-terminal-confirmed.txt",
+    "capture": "fresh native accessibility tree"
+  },
+  {
+    "id": "EV22-terminal-saved",
+    "actions": "Refreshed the stale editor first; saved arrived with ETA18:10. Inspect actual saved terminal state.",
+    "recordedAt": "2026-11-07T22:31:12.085Z",
+    "snapshot": "evidence/EV22-terminal-saved.txt",
+    "capture": "fresh native accessibility tree"
+  },
+  {
+    "id": "EV23-peer-shared-state",
+    "actions": "Peer tab retained unsent contact text while Return updated to18:15; shared revision should22.",
+    "recordedAt": "2026-11-07T22:31:31.748Z",
+    "snapshot": "evidence/EV23-peer-shared-state.txt",
+    "capture": "fresh native accessibility tree"
+  },
+  {
+    "id": "EV24-stale-contact-rejected",
+    "actions": "Submitted the peer unsent contact against an older revision; expect explicit rejection without overwrite.",
+    "recordedAt": "2026-11-07T22:31:33.179Z",
+    "snapshot": "evidence/EV24-stale-contact-rejected.txt",
+    "capture": "fresh native accessibility tree"
+  },
+  {
+    "id": "EV25-reload-persistence",
+    "actions": "Reloaded peer tab; inspect persisted Return state and revision22.",
+    "recordedAt": "2026-11-07T22:31:33.845Z",
+    "snapshot": "evidence/EV25-reload-persistence.txt",
+    "capture": "fresh native accessibility tree"
+  },
+  {
+    "id": "EV26-stale-without-update",
+    "actions": "Reset normal fixture, advanced service clock to17:35 without publishing a new ETA; Return remains17:15 with08:40 as-of and Within pickup window.",
+    "recordedAt": "2026-11-07T22:31:57.609Z",
+    "snapshot": "evidence/EV26-stale-without-update.txt",
+    "capture": "fresh native accessibility tree"
+  },
+  {
+    "id": "EV27-mobile-375",
+    "actions": "Viewport375x812; recorded DOM widths and polite status region; screenshot captured separately.",
+    "recordedAt": "2026-11-07T22:32:08.112Z",
+    "snapshot": "evidence/EV27-mobile-375.txt",
+    "capture": "fresh native accessibility tree"
+  },
+  {
+    "id": "EV28-measured-mobile",
+    "actions": "Adjusted outer viewport request after measured323px; measured actual layout width recorded in JSON.",
+    "recordedAt": "2026-11-07T22:32:16.384Z",
+    "snapshot": "evidence/EV28-measured-mobile.txt",
+    "capture": "fresh native accessibility tree"
+  }
+]

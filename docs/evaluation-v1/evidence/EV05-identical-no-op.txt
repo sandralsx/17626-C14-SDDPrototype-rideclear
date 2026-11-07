@@ -1,0 +1,91 @@
+- link "Skip to trip information":
+  - /url: "#main"
+- banner:
+  - link "RideClear home":
+    - /url: ./
+    - text: RideClear
+    - generic: Your ride, clearly.
+  - group "Demo view":
+    - button "Rider view"
+    - button "Dispatch view" [pressed]
+  - generic: Prototype V1
+- strong: Demo service
+- generic: Fictional trips · simulated messages · no real ride changes
+- main:
+  - paragraph: SATURDAY, NOVEMBER 7
+  - heading "Keep riders informed" [level=1]
+  - paragraph: One trip record. Clear updates. A visible communication trail.
+  - generic: Demo service time · Eastern
+  - strong: 4:50 PM
+  - navigation "Today's trip legs":
+    - button "Outbound Riverside Community Center 9:00 AM – 9:20 AM Within pickup window":
+      - text: Outbound
+      - generic: ↗
+      - generic: Riverside Community Center
+      - generic: 9:00 AM – 9:20 AM
+      - generic: Within pickup window
+    - button "Return Maple Street home 5:00 PM – 5:30 PM Pickup delayed" [pressed]:
+      - text: Return
+      - generic: ↙
+      - generic: Maple Street home
+      - generic: 5:00 PM – 5:30 PM
+      - generic: Pickup delayed
+  - region "Update pickup information":
+    - paragraph: RETURN TRIP
+    - heading "Update pickup information" [level=2]
+    - paragraph:
+      - text: Original window
+      - strong: 5:00 PM – 5:30 PM
+      - text: stays fixed.
+    - generic: Estimated arrival · Eastern
+    - textbox "Estimated arrival · Eastern": 17:45
+    - generic: Leave blank if no estimate is available.
+    - generic: Vehicle status
+    - combobox "Vehicle status":
+      - option "Scheduled"
+      - option "On the way" [selected]
+      - option "Vehicle arrived"
+      - option "Trip completed"
+    - checkbox "Driver accepted this pickup-information change (simulated)"
+    - generic: Driver accepted this pickup-information change (simulated)
+    - paragraph: A predicted delay triggers its own notice, even without driver acceptance.
+    - button "Save pickup update" [active]
+    - button "Send change notice"
+    - separator
+    - generic: Demo service time · Eastern
+    - textbox "Demo service time · Eastern": 16:50
+    - generic: Move forward to test when a delay is identified.
+    - button "Set demo time"
+    - separator
+    - generic: Rider's preferred channel
+    - combobox "Rider's preferred channel":
+      - option "SMS (simulated)"
+      - option "Phone (simulated)"
+      - option "Email (simulated)" [selected]
+    - button "Save channel preference"
+  - region "Communication record":
+    - heading "Communication record" [level=2]
+    - generic: "1"
+    - paragraph: Delivery outcomes below are explicitly simulated. Sending is not proof that the rider received a message.
+    - article:
+      - generic: N1 · Return
+      - generic: sent
+      - heading "Your pickup is delayed" [level=3]
+      - paragraph:
+        - text: Return trip · Estimated arrival 5:45 PM.
+        - text: Original window 5:00 PM – 5:30 PM.
+      - paragraph: Identified before the pickup window ended. Delivery and acknowledgement are recorded separately.
+      - list:
+        - listitem: Email · sent 4:50 PM · Sent · not yet delivered
+      - button "Mark delivered"
+      - button "Mark unreachable"
+  - region "Rider requests":
+    - heading "Rider requests" [level=2]
+    - generic: 0 open
+    - generic: No rider requests yet.
+  - generic "Demo controls & sample scenarios"
+- status: Pickup information saved. Any new notice is visible in the communication record.
+- contentinfo:
+  - generic: RideClear / A3 V1
+  - generic: Same-browser shared demo · revision 4
+  - generic: Estimates are simulated, not a pickup guarantee.

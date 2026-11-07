@@ -1,0 +1,168 @@
+Browser tab: 4, Title: "RideClear · Prototype V1", URL: "https://rideclear-a3-v1-shuxin-20261107.tomato-star.chatgpt.site/".
+0 AXWebArea RideClear · Prototype V1, URL: rideclear-a3-v1-shuxin-20261107.tomato-star.chatgpt.site/
+	1 link Description: Skip to trip information, Value: rideclear-a3-v1-shuxin-20261107.tomato-star.chatgpt.site/#main
+	2 container
+		3 link Description: RideClear home, Value: rideclear-a3-v1-shuxin-20261107.tomato-star.chatgpt.site/
+		4 container Demo view
+			5 checkbox Rider view, Value: 0, ID: view-rider
+			6 checkbox Dispatch view, Value: 1, ID: view-dispatch
+		7 text Prototype V1
+	8 text Demo service
+	9 text Fictional trips · simulated messages · no real ride changes
+	10 container main
+		11 text SATURDAY, NOVEMBER 7
+		12 heading Keep riders informed, Value: 1, ID: page-title
+			74 text Keep riders informed
+		75 text One trip record. Clear updates. A visible communication trail.
+		15 text Demo service time · Eastern
+		76 text 5:35 PM
+		17 container Today's trip legs
+			18 container trip-list
+				77 checkbox Outbound Riverside Community Center 9:00 AM – 9:20 AM Within pickup window, Value: 0, ID: leg-outbound
+					78 text Outbound
+					79 text Riverside Community Center
+					80 text 9:00 AM – 9:20 AM
+					81 text Within pickup window
+				82 checkbox Return Maple Street home 5:00 PM – 5:30 PM Pickup delayed, Value: 1, ID: leg-return
+					83 text Return
+					84 text Maple Street home
+					85 text 5:00 PM – 5:30 PM
+					86 text Pickup delayed
+		29 container content
+			87 container Update pickup information
+				88 text RETURN TRIP
+				89 heading Update pickup information, Value: 2, ID: edit-heading
+					90 text Update pickup information
+				91 container
+					92 text Original window  5:00 PM – 5:30 PM  stays fixed.
+				93 container trip-form
+					94 container
+						95 text The demo data changed. Review fresh values before saving.
+						96 button Refresh this form
+					97 text Estimated arrival · Eastern
+					98 time field (settable) Estimated arrival · Eastern, Value: 18:05, ID: edit-eta
+						99 container
+							100 stepper
+							101 stepper
+						102 pop up button 显示时间选择器 显示时间选择器
+					103 text Leave blank if no estimate is available.
+					104 text Vehicle status
+					105 pop up button (collapsed, settable) Vehicle status, Value: On the way, ID: edit-status, Secondary Actions: Expand
+						106 menu
+							107 Scheduled
+							108 (selected) On the way
+							109 Vehicle arrived
+							110 Trip completed
+					111 container
+						112 checkbox (settable, integer) Description: Driver accepted this pickup-information change (simulated), Value: 1, ID: driver-accepted
+						113 text Driver accepted this pickup-information change  (simulated)
+					114 text A predicted delay triggers its own notice, even without driver acceptance.
+					115 button Save pickup update, ID: save-trip
+					116 button Send change notice, ID: send-change
+				117 container clock-form
+					118 text Demo service time · Eastern
+					119 time field (settable) Demo service time · Eastern, Value: 17:35, ID: demo-time
+						120 container
+							121 stepper
+							122 stepper
+						123 pop up button 显示时间选择器 显示时间选择器
+					124 text Move forward to test when a delay is identified.
+					125 button Set demo time, ID: set-clock
+				126 container channel-form
+					127 text Rider's preferred channel
+					128 pop up button (collapsed, settable) Rider's preferred channel, Value: Email (simulated), ID: channel, Secondary Actions: Expand
+						129 menu
+							130 SMS (simulated)
+							131 Phone (simulated)
+							132 (selected) Email (simulated)
+					133 button Save channel preference, ID: save-channel
+			134 container Communication record
+				135 heading Communication record, Value: 2, ID: communications-heading
+					136 text Communication record
+				137 text 6
+				138 text Delivery outcomes below are explicitly simulated. Sending is not proof that the rider received a message.
+				139 container
+					140 text N7 · Return unreachable
+					141 heading Your pickup information has changed, Value: 3
+						142 text Your pickup information has changed
+					143 text Return trip · Estimated arrival 6:05 PM.
+					144 text Original window 5:00 PM – 5:30 PM.
+					145 content list
+						146 container
+							147 AXListMarker 1. 
+							148 text Email · sent 5:35 PM · Unreachable · follow-up needed · unreachable 5:35 PM
+					149 button Retry on Email, ID: retry-N7
+				150 container
+					151 text N6 · Return sent
+					152 heading Your pickup is delayed, Value: 3
+						153 text Your pickup is delayed
+					154 text Return trip · Estimated arrival 6:05 PM.
+					155 text Original window 5:00 PM – 5:30 PM. Early-notice miss: this delay was identified after the opportunity to notify before the window ended.
+					156 content list
+						157 container
+							158 AXListMarker 1. 
+							159 text Email · sent 5:35 PM · Sent · not yet delivered
+					160 button Mark delivered, ID: deliver-N6
+					161 button Mark unreachable, ID: unreachable-N6
+				162 container
+					163 text N5 · Return sent
+					164 heading Your arrival estimate is unavailable, Value: 3
+						165 text Your arrival estimate is unavailable
+					166 text Return trip · No estimate is available.
+					167 text Original window 5:00 PM – 5:30 PM.
+					168 content list
+						169 container
+							170 AXListMarker 1. 
+							171 text Email · sent 5:35 PM · Sent · not yet delivered
+					172 button Mark delivered, ID: deliver-N5
+					173 button Mark unreachable, ID: unreachable-N5
+				174 container
+					175 text N4 · Return sent
+					176 heading Your estimate is back within the window, Value: 3
+						177 text Your estimate is back within the window
+					178 text Return trip · Estimated arrival 5:20 PM.
+					179 text Original window 5:00 PM – 5:30 PM.
+					180 content list
+						181 container
+							182 AXListMarker 1. 
+							183 text Email · sent 5:35 PM · Sent · not yet delivered
+					184 button Mark delivered, ID: deliver-N4
+					185 button Mark unreachable, ID: unreachable-N4
+				186 container
+					187 text N3 · Return sent
+					188 heading Your pickup is delayed, Value: 3
+						189 text Your pickup is delayed
+					190 text Return trip · Estimated arrival 5:55 PM.
+					191 text Original window 5:00 PM – 5:30 PM. Early-notice miss: this delay was identified after the opportunity to notify before the window ended.
+					192 content list
+						193 container
+							194 AXListMarker 1. 
+							195 text Email · sent 5:35 PM · Sent · not yet delivered
+					196 button Mark delivered, ID: deliver-N3
+					197 button Mark unreachable, ID: unreachable-N3
+				198 container
+					199 text N1 · Return acknowledged
+					200 heading Your pickup is delayed, Value: 3
+						201 text Your pickup is delayed
+					202 text Return trip · Estimated arrival 5:45 PM.
+					203 text Original window 5:00 PM – 5:30 PM. Identified before the pickup window ended. Delivery and acknowledgement are recorded separately.
+					204 content list
+						205 container
+							206 AXListMarker 1. 
+							207 text Email · sent 4:50 PM · Acknowledged · delivered 5:35 PM · acknowledged 5:35 PM
+			208 container Rider requests
+				209 heading Rider requests, Value: 2, ID: requests-heading
+					210 text Rider requests
+				211 text 0 open
+				212 container
+					213 text R2 · Return Reviewed The revised return time will not work. Please review my pickup. Submitted 5:35 PM · ETA snapshot 5:45 PM.
+					214 text Review does not approve or apply a new schedule. Reviewed 5:35 PM
+		68 button (collapsed) Demo controls & sample scenarios, Secondary Actions: Expand
+			69 text Demo controls & sample scenarios
+	215 text Simulated notice outcome recorded: unreachable.
+	70 container
+		71 text RideClear / A3 V1
+		216 text Same-browser shared demo · revision 16
+		73 text Estimates are simulated, not a pickup guarantee.
+
+The focused UI element is 0 AXWebArea RideClear · Prototype V1, URL: rideclear-a3-v1-shuxin-20261107.tomato-star.chatgpt.site/
