@@ -1,0 +1,7 @@
+* text=auto
+sources/** -text
+.specify/** -text
+.agents/** -text
+frontend/** text eol=lf
+tests/** text eol=lf
+scripts/** text eol=lf

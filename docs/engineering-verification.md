@@ -26,6 +26,11 @@ because the modules did not yet exist. After implementation, `node --test` passe
 `node --check frontend/app.js` passed. Static build copied only five app assets.
 No interview/model/document file is included in the public application directory.
 
+Token color calculations also passed: main text 10.73:1, muted text 5.98:1,
+primary-button text 6.69:1, warning text 6.37:1, control boundaries 3.60:1 and
+focus ring 5.96:1 against their specified backgrounds. Exact checked pairs are
+in `contrast-checks.json`; this is not a whole-page conformance audit.
+
 ## Browser interaction performed
 
 Chromium local preview was served over HTTP localhost after resolving sandbox
