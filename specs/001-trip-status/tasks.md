@@ -56,7 +56,7 @@ review it in dispatch; trip/ETA/window remain unchanged.
 - [x] T017 Add persistent live feedback, labels, errors, focus preservation and reduced-motion styles in frontend/index.html, frontend/app.js and frontend/styles.css.
 - [x] T018 Run behavior tests/build and browser keyboard, narrow-screen and tab-sync checks; record actual evidence in docs/engineering-verification.md.
 - [x] T019 [P] Record Spec Kit provenance, implementation mappings and V1 run instructions in docs/workflow-receipt.md, docs/implementation-map.md and README.md.
-- [ ] T020 Preserve the model/spec/plan/tasks/source in a private GitHub repository and v1 Git reference, deploy the separate V1 URL, and record verified links in README.md and docs/release-v1.md.
+- [x] T020 Preserve the model/spec/plan/tasks/source in a private GitHub repository and v1 Git reference, deploy the separate V1 URL, and record verified links in README.md and docs/release-v1.md.
 
 ## Dependencies & Execution Order
 

@@ -8,7 +8,8 @@ for (const name of files) {
   await copyFile(path.join(root, 'frontend', name), path.join(root, 'dist', name));
 }
 const assets = await readdir(path.join(root, 'dist'));
-if (assets.some(name => !files.includes(name))) throw new Error('Unexpected public asset in dist.');
+// The Sites packager adds its hosting metadata here after a successful build.
+if (assets.some(name => !files.includes(name) && name !== '.openai')) throw new Error('Unexpected public asset in dist.');
 const total = (await Promise.all(files.map(name => stat(path.join(root, 'dist', name)))))
   .reduce((sum, x) => sum + x.size, 0);
 console.log(`Built ${files.length} static application assets (${total} bytes). No source interviews are public assets.`);

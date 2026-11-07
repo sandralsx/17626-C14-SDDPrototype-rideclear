@@ -1,0 +1,19 @@
+{
+  "source_commit": "3b3a21755bdc5bef8946f289d26e4f6c7099896a",
+  "assets_sha256": {
+    "app.js": "ebd857b5c379407d95cd6297fdf4b3e1dcce2cc7364fb7936732b514fcc0a0f3",
+    "domain.js": "168eb5f363e1ab0189d67e684bd76319d04703362e0ec67e5d3b7ab713e28139",
+    "index.html": "34ca00052d5445aa3bb3ed5e4b3a81493eb45c1daf32dd2d4ca51b1b64e6c63f",
+    "store.js": "2a4107fa5a6edf933cf61e370e323e83462f78fd00eff319857e8ea093a3697f",
+    "styles.css": "13e572ef3cc284ca65bb33bd7ca1b3fc00b235857bf505388d84dc284f20647f"
+  },
+  "deployment_archive_sha256": "b2445b5238f7268c09c6d4cec91042c69ff57bd17c58b584f81974a9c22203eb",
+  "public_archive_files": [
+    "dist/app.js",
+    "dist/domain.js",
+    "dist/index.html",
+    "dist/store.js",
+    "dist/styles.css",
+    "dist/.openai/hosting.json"
+  ]
+}

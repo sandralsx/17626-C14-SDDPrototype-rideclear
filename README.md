@@ -7,11 +7,13 @@ based on three team members' HW2 models and checked Shuxin HW1 evidence.
 
 | Component | Current state |
 | --- | --- |
-| GitHub Version 1 | V1 Git reference will be recorded after preservation. |
+| GitHub Version 1 | [v1 preserved version](https://github.com/sandralsx/17626-a3-rideclear/tree/v1). |
 | GitHub Version 2 | Not created; awaits actual V1 evaluation and specification revision. |
-| Prototype V1 URL | Deployment in progress; verified URL will be recorded here. |
+| Prototype V1 URL | [Open Prototype V1](https://rideclear-a3-v1-shuxin-20261107.tomato-star.chatgpt.site) · deployed; currently owner-only. |
 | Prototype V2 URL | Not deployed. V1 will remain separate. |
 | Requirements Analysis and Learning Log | [Goal model and decisions](docs/goal-model.md), [V1 spec](specs/001-trip-status/spec.md), [implementation map](docs/implementation-map.md). Student-authored learning-log.md remains to be written independently. |
+
+The demo was deployed successfully through the Sites private operation and opened in the browser. Its audience is currently owner-only. Public grader access is awaiting an explicit visibility choice; the source repository remains private.
 
 The final assignment requires all five actual links when V2 and the independent
 Learning Log exist. This stage does not invent missing final-deliverable URLs.
