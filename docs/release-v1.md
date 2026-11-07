@@ -23,7 +23,10 @@ Asset SHA-256 values and verified tar contents are in `v1-build-assets.json`.
 The deployment archive contains only hosting metadata and five dist assets; original
 interviews, assignment and source models are not publicly served by this app.
 
-V1 is preserved independently of future V2. Public access for grading is awaiting
-the user's explicit visibility choice. This access state is distinct from the
-GitHub repository, which remains private. No collaborators or invitations were added.
+V1 is preserved independently of future V2. After the user explicitly authorized
+public access, the Site access policy changed to **public**, revision 2, at
+2026-11-07T21:18:34.986387Z (16:18 Eastern). The application code and the immutable
+v1 tag were not changed. The tag's README describes the earlier owner-only release
+state; the default-branch README records current public access. The GitHub repository
+remains private. No collaborators or invitations were added.
 V2, student Prototype Evaluation and Learning Log are not authored in Step 3.
