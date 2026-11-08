@@ -1,0 +1,19 @@
+{
+  "archive_members": [
+    "dist/app.js",
+    "dist/domain.js",
+    "dist/index.html",
+    "dist/store.js",
+    "dist/styles.css",
+    "dist/.openai/hosting.json"
+  ],
+  "public_archive_file_count": 6,
+  "application_bytes_match_github_code": true,
+  "sha256": {
+    "index.html": "d4c6f0cb05a8f0583a1ce854c1f4469e7974563b73606ac44d55209706fc4f79",
+    "styles.css": "671421103123110b95c9364fd208f400fae4104938ebff053f6997d2b8c42be1",
+    "domain.js": "10bb8c0af160f57cd34839c87cb9f00f6660a55678b293d49146f2e0f1a9141b",
+    "store.js": "c618eaed5eaa7c285d89d5ae588dec3ae663294d76b9911a74cc004371af83f5",
+    "app.js": "703610897c8a063d4490e6e66488775f2b37588c91d967f103f5f1578b45d89d"
+  }
+}

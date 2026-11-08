@@ -24,3 +24,17 @@ AI-assisted technical assessment, not a student Learning Log. The same eight sel
 | FR-019 | ID-01/EV20 → existing focus contract clarified AS-24 → stable ack control/guard → V2E03/04: focus stays ack-N1, next Tab contact-message, repeat Return revision unchanged | Fully satisfied for observed keyboard defect correction; not a new requirements-level improvement by itself. |
 
 FR-009/011/013/014/016 retain fictional-only operation, immutable snapshots, manual decisions, labeled storage mode and preservation. Existing25 passing tests cover the inherited domain/store invariants together with new requirements; live UI evidence supplements those tests. V1 Step4 results are historical and are not overwritten with V2 satisfaction.
+
+## Immutable V2 implementation anchors
+
+- [export function tripCondition](https://github.com/sandralsx/17626-a3-rideclear/blob/89d49042a599c1c1ef0eb2ae0b4c8a41976468ce/frontend/domain.js#L25)
+- [export function noticeTiming](https://github.com/sandralsx/17626-a3-rideclear/blob/89d49042a599c1c1ef0eb2ae0b4c8a41976468ce/frontend/domain.js#L36)
+- [export function applyCommand](https://github.com/sandralsx/17626-a3-rideclear/blob/89d49042a599c1c1ef0eb2ae0b4c8a41976468ce/frontend/domain.js#L93)
+- [function tripPanel](https://github.com/sandralsx/17626-a3-rideclear/blob/89d49042a599c1c1ef0eb2ae0b4c8a41976468ce/frontend/app.js#L47)
+- [function noticeBody](https://github.com/sandralsx/17626-a3-rideclear/blob/89d49042a599c1c1ef0eb2ae0b4c8a41976468ce/frontend/app.js#L57)
+- [function attemptHistory](https://github.com/sandralsx/17626-a3-rideclear/blob/89d49042a599c1c1ef0eb2ae0b4c8a41976468ce/frontend/app.js#L69)
+- [function riderNotices](https://github.com/sandralsx/17626-a3-rideclear/blob/89d49042a599c1c1ef0eb2ae0b4c8a41976468ce/frontend/app.js#L73)
+- [function restoreFocus](https://github.com/sandralsx/17626-a3-rideclear/blob/89d49042a599c1c1ef0eb2ae0b4c8a41976468ce/frontend/app.js#L27)
+- [export function createStore](https://github.com/sandralsx/17626-a3-rideclear/blob/89d49042a599c1c1ef0eb2ae0b4c8a41976468ce/frontend/store.js#L14)
+
+Public-deployment evidence V2E15..17 repeats the elapsed/timing/focus paths; V2E18 confirms the preserved V1 page. These supplement the local V2E01..14 records.

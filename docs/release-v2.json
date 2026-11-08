@@ -1,0 +1,22 @@
+{
+  "github_repository": "https://github.com/sandralsx/17626-a3-rideclear",
+  "github_spec_commit": "624261a5e9ffa702e174b44836994249b4593d14",
+  "github_implementation_commit": "89d49042a599c1c1ef0eb2ae0b4c8a41976468ce",
+  "v1_tag_commit": "4e3997c26cfd9792dcdb0e12a1c659b1cb3e0df0",
+  "step4_parent_commit": "f70e073c17ecffac08053a75aebe3db894da02ab",
+  "v1_url": "https://rideclear-a3-v1-shuxin-20261107.tomato-star.chatgpt.site",
+  "v2_url": "https://rideclear-a3-v2-shuxin-20261107.tomato-star.chatgpt.site",
+  "project_id": "appgprj_6aefd491f3ac819197f1e31a3d705e59",
+  "sites_source_commit": "6f70297d6978a56ab58fadf576d1ca7268365f06",
+  "saved_version_id": "appgprj_6aefd491f3ac819197f1e31a3d705e59~appgver_685c7ffb94b48191ba712c8f55899429",
+  "saved_site_version_number": 1,
+  "deployment_id": "appgdep_6aefe36d85ec8191b4cc570878c8426d",
+  "deployment_status": "succeeded",
+  "deployment_updated_at": "2026-11-08T02:50:27.915568+00:00",
+  "access_mode": "public",
+  "access_revision": 2,
+  "access_updated_at": "2026-11-08T02:50:10.379335+00:00",
+  "github_audience": "private; unchanged",
+  "browser_evidence": "docs/verification-v2/evidence/records.json",
+  "authorship": "AI-assisted Step5 technical artifacts; no learning-log.md or Step6 examples/answers authored"
+}

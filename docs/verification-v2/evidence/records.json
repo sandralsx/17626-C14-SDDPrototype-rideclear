@@ -96,5 +96,33 @@
     "url": "http://127.0.0.1:4183/",
     "at": "2026-11-08T02:44:20.679Z",
     "evidence": "evidence/V2E14-mobile.txt"
+  },
+  {
+    "id": "V2E15-deployed-elapsed",
+    "actions": "Public V2 deployment: Return elapsed warning and last recorded ETA/as-of reproduce local acceptance.",
+    "url": "https://rideclear-a3-v2-shuxin-20261107.tomato-star.chatgpt.site/",
+    "at": "2026-11-08T02:50:53.576Z",
+    "evidence": "evidence/V2E15-deployed-elapsed.txt"
+  },
+  {
+    "id": "V2E16-deployed-timing",
+    "actions": "Public V2 deployment: labeled discovery16:50 and delivery17:35, explicit at/after-deadline follow-up.",
+    "url": "https://rideclear-a3-v2-shuxin-20261107.tomato-star.chatgpt.site/",
+    "at": "2026-11-08T02:50:54.337Z",
+    "evidence": "evidence/V2E16-deployed-timing.txt"
+  },
+  {
+    "id": "V2E17-deployed-focus",
+    "actions": "Public V2 deployment: keyboard acknowledgement keeps the same stable ack-N1 control.",
+    "url": "https://rideclear-a3-v2-shuxin-20261107.tomato-star.chatgpt.site/",
+    "at": "2026-11-08T02:50:55.623Z",
+    "evidence": "evidence/V2E17-deployed-focus.txt"
+  },
+  {
+    "id": "V2E18-v1-preserved",
+    "actions": "Existing public V1 page remains accessible with Prototype V1 and its original elapsed-ETA interpretation; read only, no V1 state reset.",
+    "url": "https://rideclear-a3-v1-shuxin-20261107.tomato-star.chatgpt.site/",
+    "at": "2026-11-08T02:51:05.194Z",
+    "evidence": "evidence/V2E18-v1-preserved.txt"
   }
 ]

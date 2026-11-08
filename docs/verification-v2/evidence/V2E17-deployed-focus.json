@@ -1,0 +1,11 @@
+{
+  "before": {
+    "id": "ack-N1",
+    "tag": "BUTTON"
+  },
+  "after": {
+    "ariaDisabled": "true",
+    "id": "ack-N1",
+    "label": "Update acknowledged"
+  }
+}

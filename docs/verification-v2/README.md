@@ -34,3 +34,8 @@ This is a technical repeat of the actual V1 failure paths, not stakeholder accep
 ## Preservation and publication
 
 V1 tag and source/spec/model remain independently preserved. V2 is a descendant in the same private GitHub repository and has a separate Site identity, URL and browser state keys. Only frontend assets are copied to the V2 hosting source; interview/model/PDF evidence is not part of public assets. Final publication provenance and deployed smoke evidence are recorded in [release-v2](../release-v2.md) when the native deployment completes.
+
+
+## Published-page checks
+
+Native deployment status succeeded at2026-11-08T02:50:27.915568Z. V2E15 confirms elapsed interpretation on the public URL; V2E16 confirms separate late-delivery timing; V2E17 focus JSON confirms the stable acknowledged control. V2E18 confirms V1 remains accessible and unchanged in title/observed state. Both URLs were read in the browser; V1 received no state-changing action. [Public V2 proof screenshot](evidence/V2E17-deployed-proof.jpg). The local preview was stopped after online checks.

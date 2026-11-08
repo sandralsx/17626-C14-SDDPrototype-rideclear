@@ -1,0 +1,104 @@
+Browser tab: 7, Title: "RideClear · Prototype V2", URL: "https://rideclear-a3-v2-shuxin-20261107.tomato-star.chatgpt.site/".
+1 AXWebArea RideClear · Prototype V2, URL: rideclear-a3-v2-shuxin-20261107.tomato-star.chatgpt.site/
+	2 link Description: Skip to trip information, Value: rideclear-a3-v2-shuxin-20261107.tomato-star.chatgpt.site/#main
+	3 container
+		4 link Description: RideClear home, Value: rideclear-a3-v2-shuxin-20261107.tomato-star.chatgpt.site/
+		5 container Demo view
+			6 checkbox Rider view, Value: 1, ID: view-rider
+			7 checkbox Dispatch view, Value: 0, ID: view-dispatch
+		8 text Prototype V2
+	9 text Demo service
+	10 text Fictional trips · simulated messages · no real ride changes
+	11 container main
+		12 text SATURDAY, NOVEMBER 7
+		13 heading Your rides today, Value: 1, ID: page-title
+			89 text Your rides today
+		90 text Know your pickup time. Stay informed if it changes.
+		16 text Demo service time · Eastern
+		91 text 5:35 PM
+		18 container Today's trip legs
+			19 text TODAY'S TRIPS
+			20 container trip-list
+				92 checkbox Outbound Riverside Community Center 9:00 AM – 9:20 AM Trip completed, Value: 0, ID: leg-outbound
+					93 text Outbound
+					94 text Riverside Community Center
+					95 text 9:00 AM – 9:20 AM
+					96 text Trip completed
+				97 checkbox Return Maple Street home 5:00 PM – 5:30 PM Pickup delayed, Value: 1, ID: leg-return
+					98 text Return
+					99 text Maple Street home
+					100 text 5:00 PM – 5:30 PM
+					101 text Pickup delayed
+			31 text One day. Two directions.
+			32 text Your original pickup window stays visible, even when an estimate changes.
+		33 container content
+			102 container Your pickup details
+				103 text RETURN PICKUP
+				104 heading Your pickup details, Value: 2, ID: pickup-heading
+					105 text Your pickup details
+				106 text RC-105
+				107 container
+					108 text Pickup
+					109 text Riverside Community Center
+					110 text Destination
+					111 text Maple Street home
+				112 text Original scheduled pickup window
+				113 text 5:00 PM – 5:30 PM
+				114 text Latest estimated arrival
+				115 text 5:45 PM
+				116 text Pickup delayed
+				117 text Later than your original pickup window. See the latest notice below.
+				118 text Vehicle
+				119 text Accessible van 18
+				120 text Vehicle status
+				121 text On the way
+				122 container
+					123 text Estimate updated at  4:50 PM  · Eastern
+					124 text Both the estimate and the service time are simulated.
+			125 container Trip updates
+				126 heading Trip updates, Value: 2, ID: notices-heading
+					127 text Trip updates
+				128 text 1
+				129 container
+					130 text Delivered Identified 4:50 PM
+					131 heading Your pickup is delayed, Value: 3
+						132 text Your pickup is delayed
+					133 text Return trip · Recorded estimated arrival 5:45 PM.
+					134 text Original window 5:00 PM – 5:30 PM. Discovery before window end. Window end 5:30 PM. Delivery recorded at or after window end · follow-up needed. Recorded delivery is not proof of acknowledgement or understanding. SMS · simulated channel
+					135 text Delivered · not yet acknowledged
+					136 content list
+						137 container
+							138 AXListMarker 1. 
+							139 text SMS · attempt 1
+							140 text Sent 4:50 PM
+							141 text Delivered 5:35 PM
+							142 text Acknowledged not recorded
+							143 text Unreachable not recorded
+					144 button Acknowledge this update, ID: ack-N1
+			145 container Need a different plan?
+				146 heading Need a different plan?, Value: 2, ID: contact-heading
+					147 text Need a different plan?
+				148 text If the revised time will not work, let dispatch know. This does not change your ride automatically.
+				149 container contact-form
+					150 text Message to dispatch
+					151 text entry area (settable) Message to dispatch, ID: contact-message
+					152 text 1–500 characters · for your return trip
+					153 button Send demo request, ID: contact-submit
+		78 container
+			79 button (expanded) Demo controls & sample scenarios, Secondary Actions: Collapse
+				80 text Demo controls & sample scenarios
+			81 text Replace the fictional session with a sample case. No message is sent outside this demo.
+			82 button Reset normal trips
+			83 button Load early delay
+			84 button Load late discovery
+			85 button Load unknown ETA
+			86 button Load elapsed ETA
+			87 button Load late delivery
+			88 text Saved within this browser profile and site only. Open this URL in another tab to compare rider and dispatch views. Different devices have separate sessions.
+	154 text Sample scenario loaded. Previous fictional records were replaced.
+	74 container
+		75 text RideClear / A3 V2
+		155 text Same-browser shared demo · revision 2
+		77 text Estimates are simulated, not a pickup guarantee.
+
+The focused UI element is 87 button Load late delivery

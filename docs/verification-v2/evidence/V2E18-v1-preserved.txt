@@ -1,0 +1,85 @@
+Browser tab: 4, Title: "RideClear · Prototype V1", URL: "https://rideclear-a3-v1-shuxin-20261107.tomato-star.chatgpt.site/".
+0 AXWebArea RideClear · Prototype V1, URL: rideclear-a3-v1-shuxin-20261107.tomato-star.chatgpt.site/
+	1 link Description: Skip to trip information, Value: rideclear-a3-v1-shuxin-20261107.tomato-star.chatgpt.site/#main
+	2 container
+		3 link Description: RideClear home, Value: rideclear-a3-v1-shuxin-20261107.tomato-star.chatgpt.site/
+		4 container Demo view
+			5 checkbox Rider view, Value: 1, ID: view-rider
+			6 checkbox Dispatch view, Value: 0, ID: view-dispatch
+		7 text Prototype V1
+	8 text Demo service
+	9 text Fictional trips · simulated messages · no real ride changes
+	10 container main
+		11 text SATURDAY, NOVEMBER 7
+		12 heading Your rides today, Value: 1, ID: page-title
+			13 text Your rides today
+		14 text Know your pickup time. Stay informed if it changes.
+		15 text Demo service time · Eastern
+		16 text 5:35 PM
+		17 container Today's trip legs
+			18 container trip-list
+				19 checkbox Outbound Riverside Community Center 9:00 AM – 9:20 AM Within pickup window, Value: 0, ID: leg-outbound
+					20 text Outbound
+					21 text Riverside Community Center
+					22 text 9:00 AM – 9:20 AM
+					23 text Within pickup window
+				24 checkbox Return Maple Street home 5:00 PM – 5:30 PM Within pickup window, Value: 1, ID: leg-return
+					25 text Return
+					26 text Maple Street home
+					27 text 5:00 PM – 5:30 PM
+					28 text Within pickup window
+		29 container content
+			30 container Your pickup details
+				31 text RETURN PICKUP
+				32 heading Your pickup details, Value: 2, ID: pickup-heading
+					33 text Your pickup details
+				34 text RC-105
+				35 container
+					36 text Pickup
+					37 text Riverside Community Center
+					38 text Destination
+					39 text Maple Street home
+				40 text Original scheduled pickup window
+				41 text 5:00 PM – 5:30 PM
+				42 text Latest estimated arrival
+				43 text 5:15 PM
+				44 text Within pickup window
+				45 text The current estimate is within your scheduled pickup window.
+				46 text Vehicle
+				47 text Accessible van 18
+				48 text Vehicle status
+				49 text Scheduled
+				50 container
+					51 text Estimate updated at  8:40 AM  · Eastern
+					52 text Both the estimate and the service time are simulated.
+			53 container Trip updates
+				54 heading Trip updates, Value: 2, ID: notices-heading
+					55 text Trip updates
+				56 text 0
+				57 text No trip updates yet.
+				58 text A change to your pickup information will appear here. You can always check the latest estimate.
+			59 container Need a different plan?
+				60 heading Need a different plan?, Value: 2, ID: contact-heading
+					61 text Need a different plan?
+				62 text If the revised time will not work, let dispatch know. This does not change your ride automatically.
+				63 container contact-form
+					64 text Message to dispatch
+					65 text entry area (settable) Message to dispatch, ID: contact-message
+					66 text 1–500 characters · for your return trip
+					67 button Send demo request, ID: contact-submit
+		68 container
+			69 button (expanded) Demo controls & sample scenarios, Secondary Actions: Collapse
+				70 text Demo controls & sample scenarios
+			71 text Replace the fictional session with a sample case. No message is sent outside this demo.
+			72 button Reset normal trips
+			73 button Load early delay
+			74 button Load late discovery
+			75 button Load unknown ETA
+			76 text Saved within this browser profile and site only. Open this URL in another tab to compare rider and dispatch views. Different devices have separate sessions.
+	77 text Demo service time updated.
+	78 container
+		79 text RideClear / A3 V1
+		80 text Same-browser shared demo · revision 24
+		81 text Estimates are simulated, not a pickup guarantee.
+
+The focused UI element is 5 checkbox Rider view, Value: 1, ID: view-rider
