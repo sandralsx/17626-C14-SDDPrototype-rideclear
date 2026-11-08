@@ -1,0 +1,3 @@
+evidence/** -text -whitespace
+regression-output.txt -text -whitespace
+pre-implementation-test.txt -text -whitespace

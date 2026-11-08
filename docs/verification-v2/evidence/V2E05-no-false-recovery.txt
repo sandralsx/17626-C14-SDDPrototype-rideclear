@@ -1,0 +1,119 @@
+Browser tab: 7, Title: "RideClear · Prototype V2", URL: "http://127.0.0.1:4183/".
+0 AXWebArea RideClear · Prototype V2, URL: 127.0.0.1:4183/
+	1 link Description: Skip to trip information, Value: 127.0.0.1:4183/#main
+	2 container
+		3 link Description: RideClear home, Value: 127.0.0.1:4183/
+		4 container Demo view
+			5 checkbox Rider view, Value: 1, ID: view-rider
+			6 checkbox Dispatch view, Value: 0, ID: view-dispatch
+		7 text Prototype V2
+	8 text Demo service
+	9 text Fictional trips · simulated messages · no real ride changes
+	10 container main
+		11 text SATURDAY, NOVEMBER 7
+		12 heading Your rides today, Value: 1, ID: page-title
+			186 text Your rides today
+		187 text Know your pickup time. Stay informed if it changes.
+		15 text Demo service time · Eastern
+		188 text 5:35 PM
+		17 container Today's trip legs
+			18 text TODAY'S TRIPS
+			19 container trip-list
+				189 checkbox Outbound Riverside Community Center 9:00 AM – 9:20 AM Trip completed, Value: 0, ID: leg-outbound
+					190 text Outbound
+					191 text Riverside Community Center
+					192 text 9:00 AM – 9:20 AM
+					193 text Trip completed
+				194 checkbox Return Maple Street home 5:00 PM – 5:30 PM Estimate needs updating, Value: 1, ID: leg-return
+					195 text Return
+					196 text Maple Street home
+					197 text 5:00 PM – 5:30 PM
+					198 text Estimate needs updating
+			30 text One day. Two directions.
+			31 text Your original pickup window stays visible, even when an estimate changes.
+		32 container content
+			199 container Your pickup details
+				200 text RETURN PICKUP
+				201 heading Your pickup details, Value: 2, ID: pickup-heading
+					202 text Your pickup details
+				203 text RC-105
+				204 container
+					205 text Pickup
+					206 text Riverside Community Center
+					207 text Destination
+					208 text Maple Street home
+				209 text Original scheduled pickup window
+				210 text 5:00 PM – 5:30 PM
+				211 text Last recorded estimated arrival
+				212 text 5:20 PM
+				213 text Estimate needs updating
+				214 text The recorded estimate has passed. Arrival is not confirmed. Contact dispatch for a new estimate.
+				215 text Vehicle
+				216 text Accessible van 18
+				217 text Vehicle status
+				218 text On the way
+				219 container
+					220 text Estimate updated at  5:35 PM  · Eastern
+					221 text Both the estimate and the service time are simulated.
+			222 container Trip updates
+				223 heading Trip updates, Value: 2, ID: notices-heading
+					224 text Trip updates
+				225 text 2
+				226 container
+					227 text Sent Created 5:35 PM
+					228 heading Your arrival estimate needs an update, Value: 3
+						229 text Your arrival estimate needs an update
+					230 text Return trip · Recorded estimated arrival 5:20 PM.
+					231 text Original window 5:00 PM – 5:30 PM. SMS · simulated channel
+					232 text Sent · not yet delivered
+					233 content list
+						234 container
+							235 AXListMarker 1. 
+							236 text SMS · attempt 1
+							237 text Sent 5:35 PM
+							238 text Delivered not recorded
+							239 text Acknowledged not recorded
+							240 text Unreachable not recorded
+				241 container
+					242 text Acknowledged Identified 4:50 PM
+					243 heading Your pickup is delayed, Value: 3
+						244 text Your pickup is delayed
+					245 text Return trip · Recorded estimated arrival 5:45 PM.
+					246 text Original window 5:00 PM – 5:30 PM. Discovery before window end. Window end 5:30 PM. Delivery recorded at or after window end · follow-up needed. Recorded delivery is not proof of acknowledgement or understanding. SMS · simulated channel
+					247 text Acknowledged
+					248 content list
+						249 container
+							250 AXListMarker 1. 
+							251 text SMS · attempt 1
+							252 text Sent 4:50 PM
+							253 text Delivered 5:35 PM
+							254 text Acknowledged 5:35 PM
+							255 text Unreachable not recorded
+					256 button (disabled) Update acknowledged, ID: ack-N1
+			257 container Need a different plan?
+				258 heading Need a different plan?, Value: 2, ID: contact-heading
+					259 text Need a different plan?
+				260 text If the revised time will not work, let dispatch know. This does not change your ride automatically.
+				261 container contact-form
+					262 text Message to dispatch
+					263 text entry area (settable) Message to dispatch, ID: contact-message
+					264 text 1–500 characters · for your return trip
+					265 button Send demo request, ID: contact-submit
+		77 container
+			78 button (expanded) Demo controls & sample scenarios, Secondary Actions: Collapse
+				79 text Demo controls & sample scenarios
+			80 text Replace the fictional session with a sample case. No message is sent outside this demo.
+			81 button Reset normal trips
+			82 button Load early delay
+			83 button Load late discovery
+			84 button Load unknown ETA
+			85 button Load elapsed ETA
+			86 button Load late delivery
+			87 text Saved within this browser profile and site only. Open this URL in another tab to compare rider and dispatch views. Different devices have separate sessions.
+	185 text Pickup information saved. Any new notice is visible in the communication record.
+	73 container
+		74 text RideClear / A3 V2
+		266 text Same-browser shared demo · revision 4
+		76 text Estimates are simulated, not a pickup guarantee.
+
+The focused UI element is 5 checkbox Rider view, Value: 1, ID: view-rider

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="RideClear prototype: clear paratransit pickup windows, arrival estimates and delay communication.">
-  <title>RideClear · Prototype V1</title>
+  <title>RideClear · Prototype V2</title>
   <link rel="stylesheet" href="./styles.css">
   <script type="module" src="./app.js"></script>
 </head>
@@ -19,7 +19,7 @@
       <button id="view-rider" type="button" data-view="rider" aria-pressed="true">Rider view</button>
       <button id="view-dispatch" type="button" data-view="dispatch" aria-pressed="false">Dispatch view</button>
     </div>
-    <span class="prototype-tag">Prototype V1</span>
+    <span class="prototype-tag">Prototype V2</span>
   </header>
   <div class="demo-banner"><span class="demo-dot" aria-hidden="true"></span><strong>Demo service</strong><span>Fictional trips · simulated messages · no real ride changes</span></div>
   <main id="main" tabindex="-1">
@@ -29,10 +29,10 @@
       <nav class="trip-nav" aria-label="Today's trip legs"><p class="eyebrow">TODAY'S TRIPS</p><div id="trip-list"></div><div class="service-note"><span class="line-mark" aria-hidden="true"></span><strong>One day. Two directions.</strong><p>Your original pickup window stays visible, even when an estimate changes.</p></div></nav>
       <div id="content"></div>
     </div>
-    <details class="demo-controls"><summary>Demo controls &amp; sample scenarios</summary><div class="scenario-layout"><p>Replace the fictional session with a sample case. No message is sent outside this demo.</p><div class="button-row"><button type="button" data-scenario="normal">Reset normal trips</button><button type="button" data-scenario="early-delay">Load early delay</button><button type="button" data-scenario="late-discovery">Load late discovery</button><button type="button" data-scenario="unknown">Load unknown ETA</button></div><p class="small">Saved within this browser profile and site only. Open this URL in another tab to compare rider and dispatch views. Different devices have separate sessions.</p></div></details>
+    <details class="demo-controls"><summary>Demo controls &amp; sample scenarios</summary><div class="scenario-layout"><p>Replace the fictional session with a sample case. No message is sent outside this demo.</p><div class="button-row"><button type="button" data-scenario="normal">Reset normal trips</button><button type="button" data-scenario="early-delay">Load early delay</button><button type="button" data-scenario="late-discovery">Load late discovery</button><button type="button" data-scenario="unknown">Load unknown ETA</button><button type="button" data-scenario="elapsed-eta">Load elapsed ETA</button><button type="button" data-scenario="late-delivery">Load late delivery</button></div><p class="small">Saved within this browser profile and site only. Open this URL in another tab to compare rider and dispatch views. Different devices have separate sessions.</p></div></details>
   </main>
   <div class="feedback" id="feedback" role="status" aria-live="polite" aria-atomic="true"></div>
-  <footer><span>RideClear / A3 V1</span><span id="session-status">Fictional service · November 7, 2026</span><span>Estimates are simulated, not a pickup guarantee.</span></footer>
+  <footer><span>RideClear / A3 V2</span><span id="session-status">Fictional service · November 7, 2026</span><span>Estimates are simulated, not a pickup guarantee.</span></footer>
   <noscript><p class="warning-banner">Enable JavaScript to use this interactive prototype.</p></noscript>
 </body>
 </html>

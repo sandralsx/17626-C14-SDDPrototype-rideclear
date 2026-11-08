@@ -1,0 +1,33 @@
+✔ fixtures keep distinct immutable outbound/return schedule and valid service-day time (3.4802ms)
+✔ ETA equality, ahead, unknown and terminal status are truthful (0.5118ms)
+✔ update is pure, preserves windows, rejects invalid status/time and no-op duplicate (4.1511ms)
+✔ early delay notice snapshots ETA/window and starts sent only (0.5831ms)
+✔ at-end and late discovery never fabricate early notice (0.5775ms)
+✔ changed delayed ETA, recovery, unknown and historical snapshots remain distinct (0.6814ms)
+✔ terminal trip changes do not create delay notices; clock alone creates none (0.4922ms)
+✔ driver acceptance gates change notice but not predicted delay (0.481ms)
+✔ delivery then explicit acknowledgement; invalid transitions rejected (0.7957ms)
+✔ unreachable and retry preserve history and do not reschedule; channel affects future attempt (0.7447ms)
+✔ contact validates 1-500 trimmed characters and preserves trip/snapshot on review (0.9919ms)
+✔ fixture scenarios are deterministic and distinguish late/unknown return states (1.9625ms)
+✔ durable state reloads and a stale editor cannot overwrite a newer revision (6.7694ms)
+✔ serialized same-revision concurrent writes cannot both succeed (0.8706ms)
+✔ no-op does not bump revision; reset cannot restore a stale revision (0.592ms)
+✔ unavailable storage or locks is explicitly temporary, not cross-tab durable (0.8427ms)
+✔ failed durable write leaves saved data unchanged and labels temporary state (0.8187ms)
+✔ FR-017 elapsed estimates warn without inventing arrival, history or new input time (5.5666ms)
+✔ FR-017 exact ETA, unknown and terminal statuses retain distinct meanings (0.4433ms)
+✔ FR-010 revised: a changed elapsed ETA never issues a recovery notice (0.848ms)
+✔ FR-018 early discovery plus late delivery cannot imply early recorded delivery (0.9209ms)
+✔ FR-018 strict-before deadline distinguishes pending, no evidence and exact-end delivery (0.6713ms)
+✔ FR-018 early delivery remains early after later acknowledgement; sent is not delivery (0.7136ms)
+✔ FR-018 retry preserves unreachable evidence while using current preference (0.6256ms)
+✔ V2 comparison fixtures reproduce elapsed and late-delivery evidence deterministically (0.6401ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 25
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 487.3466

@@ -1,0 +1,100 @@
+[
+  {
+    "id": "V2E01-elapsed",
+    "actions": "Load elapsed fixture, Return17:15 at17:35; inspect warning, last-recorded label and untouched08:40 as-of.",
+    "url": "http://127.0.0.1:4183/",
+    "at": "2026-11-08T02:42:56.643Z",
+    "evidence": "evidence/V2E01-elapsed.txt"
+  },
+  {
+    "id": "V2E02-late-delivery",
+    "actions": "Load early discovery16:50/late delivery17:35 fixture; inspect independent delivery deadline and labeled timestamps.",
+    "url": "http://127.0.0.1:4183/",
+    "at": "2026-11-08T02:43:05.352Z",
+    "evidence": "evidence/V2E02-late-delivery.txt"
+  },
+  {
+    "id": "V2E03-ack-focus",
+    "actions": "Tab to ack-N1, Return acknowledges; same stable button remains focusable and aria-disabled.",
+    "url": "http://127.0.0.1:4183/",
+    "at": "2026-11-08T02:43:15.918Z",
+    "evidence": "evidence/V2E03-ack-focus.txt"
+  },
+  {
+    "id": "V2E04-no-repeat-ack",
+    "actions": "Second Return on acknowledged control does not increment revision or change timestamps.",
+    "url": "http://127.0.0.1:4183/",
+    "at": "2026-11-08T02:43:16.281Z",
+    "evidence": "evidence/V2E04-no-repeat-ack.txt"
+  },
+  {
+    "id": "V2E05-no-false-recovery",
+    "actions": "At17:35 revised delayed17:45 ETA to elapsed17:20; inspect estimate-needs-update event, not recovery.",
+    "url": "http://127.0.0.1:4183/",
+    "at": "2026-11-08T02:43:18.493Z",
+    "evidence": "evidence/V2E05-no-false-recovery.txt"
+  },
+  {
+    "id": "V2E06-delivery-pending",
+    "actions": "Early delay before deadline shows pending delivery, without claiming receipt.",
+    "url": "http://127.0.0.1:4183/",
+    "at": "2026-11-08T02:43:33.927Z",
+    "evidence": "evidence/V2E06-delivery-pending.txt"
+  },
+  {
+    "id": "V2E07-deadline-without-delivery",
+    "actions": "At exact17:30 deadline with sent-only N1, missing recorded delivery requires manual follow-up.",
+    "url": "http://127.0.0.1:4183/",
+    "at": "2026-11-08T02:43:35.446Z",
+    "evidence": "evidence/V2E07-deadline-without-delivery.txt"
+  },
+  {
+    "id": "V2E08-exact-end-delivery",
+    "actions": "Delivery recorded exactly17:30 is not before the end; both original sent16:50 and delivered17:30 retained.",
+    "url": "http://127.0.0.1:4183/",
+    "at": "2026-11-08T02:43:36.043Z",
+    "evidence": "evidence/V2E08-exact-end-delivery.txt"
+  },
+  {
+    "id": "V2E09-early-delivery-later-ack",
+    "actions": "Delivery17:20 before17:30 remains before deadline after acknowledgement17:35; distinct labeled timestamps.",
+    "url": "http://127.0.0.1:4183/",
+    "at": "2026-11-08T02:43:39.453Z",
+    "evidence": "evidence/V2E09-early-delivery-later-ack.txt"
+  },
+  {
+    "id": "V2E10-retry-history",
+    "actions": "Unreachable SMS attempt retained; retry on current Phone preference starts sent-only attempt with labeled historical times.",
+    "url": "http://127.0.0.1:4183/",
+    "at": "2026-11-08T02:43:54.930Z",
+    "evidence": "evidence/V2E10-retry-history.txt"
+  },
+  {
+    "id": "V2E11-shared-draft",
+    "actions": "Peer receives changed ETA17:55/revision while keeping draft and focus; no silent overwrite.",
+    "url": "http://127.0.0.1:4183/",
+    "at": "2026-11-08T02:43:57.644Z",
+    "evidence": "evidence/V2E11-shared-draft.txt"
+  },
+  {
+    "id": "V2E12-stale-rejected",
+    "actions": "Peer stale contact submission rejected and draft retained; no request created.",
+    "url": "http://127.0.0.1:4183/",
+    "at": "2026-11-08T02:43:58.301Z",
+    "evidence": "evidence/V2E12-stale-rejected.txt"
+  },
+  {
+    "id": "V2E13-reload",
+    "actions": "Peer reload persists the V2 revised ETA/history and revision.",
+    "url": "http://127.0.0.1:4183/",
+    "at": "2026-11-08T02:43:58.749Z",
+    "evidence": "evidence/V2E13-reload.txt"
+  },
+  {
+    "id": "V2E14-mobile",
+    "actions": "Viewport375x812 requested; actual width recorded in metrics; horizontal scroll compared against clientWidth.",
+    "url": "http://127.0.0.1:4183/",
+    "at": "2026-11-08T02:44:20.679Z",
+    "evidence": "evidence/V2E14-mobile.txt"
+  }
+]

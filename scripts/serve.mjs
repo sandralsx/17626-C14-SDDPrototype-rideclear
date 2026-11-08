@@ -15,4 +15,4 @@ const server = http.createServer(async (request, response) => {
     response.end(data);
   } catch { response.writeHead(500); response.end('Unable to read application asset'); }
 });
-server.listen(port, '127.0.0.1', () => console.log(`RideClear V1: http://127.0.0.1:${port}`));
+server.listen(port, '127.0.0.1', () => console.log(`RideClear V2: http://127.0.0.1:${port}`));

@@ -1,0 +1,17 @@
+{
+  "before": {
+    "id": "ack-N1",
+    "label": "Acknowledge this update",
+    "tag": "BUTTON"
+  },
+  "after": {
+    "ariaDisabled": "true",
+    "id": "ack-N1",
+    "label": "Update acknowledged",
+    "tag": "BUTTON"
+  },
+  "nextTab": {
+    "id": "contact-message",
+    "tag": "TEXTAREA"
+  }
+}

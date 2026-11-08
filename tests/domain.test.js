@@ -21,10 +21,10 @@ test('fixtures keep distinct immutable outbound/return schedule and valid servic
 });
 test('ETA equality, ahead, unknown and terminal status are truthful', () => {
   const t = returned(createInitialState());
-  assert.equal(tripCondition({ ...t, eta: t.windowEnd }).key, 'on-time');
-  assert.equal(tripCondition({ ...t, eta: t.windowStart - 1 }).key, 'ahead');
-  assert.equal(tripCondition({ ...t, eta: null }).key, 'unknown');
-  assert.equal(tripCondition({ ...t, status: 'completed', eta: 1200 }).key, 'completed');
+  assert.equal(tripCondition({ ...t, eta: t.windowEnd }, 1010).key, 'on-time');
+  assert.equal(tripCondition({ ...t, eta: t.windowStart - 1 }, 1010).key, 'ahead');
+  assert.equal(tripCondition({ ...t, eta: null }, 1010).key, 'unknown');
+  assert.equal(tripCondition({ ...t, status: 'completed', eta: 1200 }, 1010).key, 'completed');
 });
 test('update is pure, preserves windows, rejects invalid status/time and no-op duplicate', () => {
   const s = createInitialState(); const before = structuredClone(s);

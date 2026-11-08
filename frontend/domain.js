@@ -1,4 +1,4 @@
-/** Pure V1 behavior. All times and delivery outcomes are explicit simulation data. */
+/** Pure V2 behavior. All times and delivery outcomes are explicit simulation data. */
 export const CHANNELS = ['sms', 'phone', 'email'];
 export const STATUSES = ['scheduled', 'en-route', 'arrived', 'completed'];
 const terminal = status => status === 'arrived' || status === 'completed';
@@ -22,13 +22,27 @@ export function formatTime(value) {
   return `${h % 12 || 12}:${String(value % 60).padStart(2, '0')} ${h >= 12 ? 'PM' : 'AM'}`;
 }
 export const windowLabel = trip => `${formatTime(trip.windowStart)} – ${formatTime(trip.windowEnd)}`;
-export function tripCondition(trip) {
+export function tripCondition(trip, now) {
   if (trip.status === 'completed') return { key: 'completed', label: 'Trip completed' };
   if (trip.status === 'arrived') return { key: 'arrived', label: 'Vehicle arrived' };
   if (trip.eta === null) return { key: 'unknown', label: 'Estimate unavailable' };
+  if (now > trip.eta) return { key: 'elapsed', label: 'Estimate needs updating' };
   if (trip.eta > trip.windowEnd) return { key: 'delayed', label: 'Pickup delayed' };
   if (trip.eta < trip.windowStart) return { key: 'ahead', label: 'Ahead of pickup window' };
   return { key: 'on-time', label: 'Within pickup window' };
+}
+
+/** Recorded evidence only: delivery never proves acknowledgement or comprehension. */
+export function noticeTiming(notice, now) {
+  if (notice.kind !== 'delay') return null;
+  const recorded = notice.attempts.map(a => a.deliveredAt).filter(t => t !== null);
+  const deliveredAt = recorded.length ? Math.min(...recorded) : null;
+  const delivery = deliveredAt !== null ? (deliveredAt < notice.windowEnd ? 'before' : 'late')
+    : now < notice.windowEnd ? 'pending' : 'missing';
+  return {
+    discovery: notice.createdAt < notice.windowEnd ? 'before' : 'late', delivery, deliveredAt,
+    followUp: ['late', 'missing'].includes(delivery) || notice.attempts.at(-1).outcome === 'unreachable'
+  };
 }
 
 export function createInitialState(scenario = 'normal') {
@@ -40,6 +54,16 @@ export function createInitialState(scenario = 'normal') {
       { id: 'return', direction: 'Return', origin: 'Riverside Community Center', destination: 'Maple Street home', vehicle: 'Accessible van 18', windowStart: 1020, windowEnd: 1050, eta: 1035, status: 'scheduled', updatedAt: 520 }
     ], notices: [], requests: []
   };
+  if (scenario === 'elapsed-eta') {
+    state.now = 1055;
+    return state;
+  }
+  if (scenario === 'late-delivery') {
+    state = createInitialState('early-delay');
+    state.scenario = 'late-delivery';
+    state = applyCommand(state, { type: 'setClock', now: 1055 });
+    return applyCommand(state, { type: 'setOutcome', noticeId: state.notices[0].id, outcome: 'delivered' });
+  }
   if (scenario !== 'normal') {
     if (!['early-delay', 'late-discovery', 'unknown'].includes(scenario)) fail('Choose a known demo scenario.');
     state.now = scenario === 'late-discovery' ? 1055 : 1010;
@@ -95,6 +119,7 @@ export function applyCommand(state, cmd) {
     if (!terminal(trip.status)) {
       if (trip.eta === null && previous.eta !== null) kind = 'unavailable';
       else if (trip.eta !== null && trip.eta > trip.windowEnd) kind = 'delay';
+      else if (trip.eta !== null && next.now > trip.eta) kind = 'elapsed';
       else if (previous.eta !== null && previous.eta > trip.windowEnd && trip.eta !== null) kind = 'recovery';
       else if (cmd.acceptedChange === true) kind = 'change';
     }
@@ -143,6 +168,6 @@ export function applyCommand(state, cmd) {
 }
 
 export function noticeTitle(notice) {
-  return { delay: 'Your pickup is delayed', recovery: 'Your estimate is back within the window', unavailable: 'Your arrival estimate is unavailable', change: 'Your pickup information has changed' }[notice.kind];
+  return { elapsed: 'Your arrival estimate needs an update', delay: 'Your pickup is delayed', recovery: 'Your estimate is back within the window', unavailable: 'Your arrival estimate is unavailable', change: 'Your pickup information has changed' }[notice.kind];
 }
 export const channelLabel = channel => ({ sms: 'SMS', phone: 'Phone', email: 'Email' }[channel]);

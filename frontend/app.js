@@ -1,11 +1,11 @@
 import { createStore } from './store.js';
-import { formatTime, timeInput, parseTime, windowLabel, tripCondition, noticeTitle, channelLabel } from './domain.js';
+import { formatTime, timeInput, parseTime, windowLabel, tripCondition, noticeTitle, channelLabel, noticeTiming } from './domain.js';
 
 const store = createStore();
 let state = store.read();
 let view = 'rider';
 let selected = 'outbound';
-try { view = sessionStorage.getItem('rideclear-view') === 'dispatch' ? 'dispatch' : 'rider'; selected = sessionStorage.getItem('rideclear-leg') === 'return' ? 'return' : 'outbound'; } catch { /* the app also works without browser persistence */ }
+try { view = sessionStorage.getItem('rideclear-v2-view') === 'dispatch' ? 'dispatch' : 'rider'; selected = sessionStorage.getItem('rideclear-v2-leg') === 'return' ? 'return' : 'outbound'; } catch { /* the app also works without browser persistence */ }
 const drafts = new Map();
 let busy = false;
 const $ = id => document.getElementById(id);
@@ -14,7 +14,7 @@ const statusLabel = status => ({ scheduled: 'Scheduled', 'en-route': 'On the way
 const outcomeLabel = outcome => ({ sent: 'Sent · not yet delivered', delivered: 'Delivered · not yet acknowledged', acknowledged: 'Acknowledged', unreachable: 'Unreachable · follow-up needed' }[outcome]);
 const viewRevision = () => `data-revision="${state.revision}"`;
 const keyFor = name => `${name}-${selected}`;
-function rememberView() { try { sessionStorage.setItem('rideclear-view', view); sessionStorage.setItem('rideclear-leg', selected); } catch {} }
+function rememberView() { try { sessionStorage.setItem('rideclear-v2-view', view); sessionStorage.setItem('rideclear-v2-leg', selected); } catch {} }
 function announce(message, error = false) {
   $('feedback').classList.toggle('error', error);
   $('feedback').textContent = message;
@@ -40,30 +40,41 @@ function staleHint(key) {
 
 function renderLegs() {
   $('trip-list').innerHTML = state.trips.map(t => {
-    const condition = tripCondition(t);
+    const condition = tripCondition(t, state.now);
     return `<button type="button" id="leg-${t.id}" class="trip-button" data-leg="${t.id}" aria-pressed="${selected === t.id}"><span class="direction">${t.direction}<span aria-hidden="true">${t.id === 'outbound' ? '↗' : '↙'}</span></span><span class="route-short">${escape(t.destination)}</span><span class="window-small">${windowLabel(t)}</span><span class="leg-state ${condition.key}">${condition.label}</span></button>`;
   }).join('');
 }
 function tripPanel(trip) {
-  const condition = tripCondition(trip);
+  const condition = tripCondition(trip, state.now);
   const etaDescription = trip.eta === null ? 'Dispatch will update your estimate when one is available.'
+    : condition.key === 'elapsed' ? 'The recorded estimate has passed. Arrival is not confirmed. Contact dispatch for a new estimate.'
     : condition.key === 'delayed' ? 'Later than your original pickup window. See the latest notice below.'
     : condition.key === 'ahead' ? 'Earlier than the window. Your scheduled pickup window has not changed.'
     : ['arrived', 'completed'].includes(condition.key) ? 'Last recorded estimate. This is not an actual arrival timestamp.'
     : 'The current estimate is within your scheduled pickup window.';
-  return `<section class="card pickup-card" aria-labelledby="pickup-heading"><div class="card-header"><div><p class="eyebrow">${trip.direction.toUpperCase()} PICKUP</p><h2 id="pickup-heading">Your pickup details</h2></div><span class="trip-id">${trip.id === 'outbound' ? 'RC-104' : 'RC-105'}</span></div><div class="route"><div class="route-stop"><span>Pickup</span><strong>${escape(trip.origin)}</strong></div><div class="route-stop"><span>Destination</span><strong>${escape(trip.destination)}</strong></div></div><div class="timing"><span class="label">Original scheduled pickup window</span><strong class="saved-window" data-testid="saved-window">${windowLabel(trip)}</strong><div class="eta-block ${condition.key}"><span class="label">Latest estimated arrival</span><strong class="eta ${trip.eta === null ? 'unknown' : ''}" data-testid="current-eta">${formatTime(trip.eta)}</strong><span class="pill ${condition.key}">${condition.label}</span><p style="margin-top:12px">${etaDescription}</p></div></div><div class="vehicle-row"><div><span>Vehicle</span><strong>${escape(trip.vehicle)}</strong></div><div><span>Vehicle status</span><strong>${statusLabel(trip.status)}</strong></div></div><hr class="subtle-rule"><p class="small" style="margin-bottom:0">Estimate updated at <strong>${formatTime(trip.updatedAt)}</strong> · Eastern<br>Both the estimate and the service time are simulated.</p></section>`;
+  return `<section class="card pickup-card" aria-labelledby="pickup-heading"><div class="card-header"><div><p class="eyebrow">${trip.direction.toUpperCase()} PICKUP</p><h2 id="pickup-heading">Your pickup details</h2></div><span class="trip-id">${trip.id === 'outbound' ? 'RC-104' : 'RC-105'}</span></div><div class="route"><div class="route-stop"><span>Pickup</span><strong>${escape(trip.origin)}</strong></div><div class="route-stop"><span>Destination</span><strong>${escape(trip.destination)}</strong></div></div><div class="timing"><span class="label">Original scheduled pickup window</span><strong class="saved-window" data-testid="saved-window">${windowLabel(trip)}</strong><div class="eta-block ${condition.key}"><span class="label">${['elapsed', 'arrived', 'completed'].includes(condition.key) ? 'Last recorded estimated arrival' : 'Latest estimated arrival'}</span><strong class="eta ${trip.eta === null ? 'unknown' : ''}" data-testid="current-eta">${formatTime(trip.eta)}</strong><span class="pill ${condition.key}">${condition.label}</span><p style="margin-top:12px">${etaDescription}</p></div></div><div class="vehicle-row"><div><span>Vehicle</span><strong>${escape(trip.vehicle)}</strong></div><div><span>Vehicle status</span><strong>${statusLabel(trip.status)}</strong></div></div><hr class="subtle-rule"><p class="small" style="margin-bottom:0">Estimate updated at <strong>${formatTime(trip.updatedAt)}</strong> · Eastern<br>Both the estimate and the service time are simulated.</p></section>`;
 }
 function noticeBody(notice) {
-  const timing = notice.kind === 'delay' ? (notice.earlyNoticeMiss
-    ? '<p class="late-note">Early-notice miss: this delay was identified after the opportunity to notify before the window ended.</p>'
-    : '<p class="small">Identified before the pickup window ended. Delivery and acknowledgement are recorded separately.</p>') : '';
-  return `<p>${notice.tripId === 'return' ? 'Return' : 'Outbound'} trip · ${notice.eta === null ? 'No estimate is available.' : `Estimated arrival ${formatTime(notice.eta)}.`}<br>Original window ${windowLabel(notice)}.</p>${timing}`;
+  const timing = noticeTiming(notice, state.now);
+  const discovery = timing ? `<p class="small">Discovery ${timing.discovery === 'before' ? 'before window end' : 'at or after window end · early-notice miss'}. Window end ${formatTime(notice.windowEnd)}.</p>` : '';
+  const labels = {
+    before: 'Delivery recorded before window end',
+    late: 'Delivery recorded at or after window end · follow-up needed',
+    pending: 'Delivery not yet recorded · before-window deadline pending',
+    missing: 'No delivery recorded before window end · follow-up needed'
+  };
+  const evidence = timing ? `<p class="${timing.followUp ? 'late-note' : 'small'}">${labels[timing.delivery]}${timing.followUp && !['late', 'missing'].includes(timing.delivery) ? ' · manual follow-up needed' : ''}. Recorded delivery is not proof of acknowledgement or understanding.</p>` : '';
+  return `<p>${notice.tripId === 'return' ? 'Return' : 'Outbound'} trip · ${notice.eta === null ? 'No estimate was recorded.' : `Recorded estimated arrival ${formatTime(notice.eta)}.`}<br>Original window ${windowLabel(notice)}.</p>${discovery}${evidence}`;
+}
+function attemptHistory(notice) {
+  const time = value => value === null ? 'not recorded' : formatTime(value);
+  return `<ol class="history">${notice.attempts.map((a, i) => `<li><strong>${channelLabel(a.channel)} · attempt ${i + 1}</strong><br>Sent ${time(a.sentAt)}<br>Delivered ${time(a.deliveredAt)}<br>Acknowledged ${time(a.acknowledgedAt)}<br>Unreachable ${time(a.unreachableAt)}</li>`).join('')}</ol>`;
 }
 function riderNotices() {
   const notices = state.notices.filter(n => n.tripId === selected).toReversed();
   return `<section class="card" aria-labelledby="notices-heading"><div class="card-header"><h2 id="notices-heading">Trip updates</h2><span class="section-count">${notices.length}</span></div>${notices.length ? notices.map(n => {
     const a = n.attempts.at(-1);
-    return `<article class="notice"><div class="notice-meta"><span class="pill ${a.outcome}">${a.outcome === 'acknowledged' ? 'Acknowledged' : a.outcome === 'unreachable' ? 'Unreachable' : a.outcome === 'delivered' ? 'Delivered' : 'Sent'}</span><span class="small">${formatTime(n.createdAt)}</span></div><h3>${noticeTitle(n)}</h3>${noticeBody(n)}<p class="small">${channelLabel(a.channel)} · simulated channel<br>${outcomeLabel(a.outcome)}</p>${a.outcome === 'delivered' ? `<button type="button" id="ack-${n.id}" data-outcome="acknowledged" data-notice="${n.id}" ${viewRevision()}>Acknowledge this update</button>` : ''}</article>`;
+    return `<article class="notice"><div class="notice-meta"><span class="pill ${a.outcome}">${a.outcome === 'acknowledged' ? 'Acknowledged' : a.outcome === 'unreachable' ? 'Unreachable' : a.outcome === 'delivered' ? 'Delivered' : 'Sent'}</span><span class="small">${n.kind === 'delay' ? 'Identified' : 'Created'} ${formatTime(n.createdAt)}</span></div><h3>${noticeTitle(n)}</h3>${noticeBody(n)}<p class="small">${channelLabel(a.channel)} · simulated channel<br>${outcomeLabel(a.outcome)}</p>${attemptHistory(n)}${['delivered', 'acknowledged'].includes(a.outcome) ? `<button type="button" id="ack-${n.id}" aria-disabled="${a.outcome === 'acknowledged'}" data-outcome="acknowledged" data-notice="${n.id}" ${viewRevision()}>${a.outcome === 'acknowledged' ? 'Update acknowledged' : 'Acknowledge this update'}</button>` : ''}</article>`;
   }).join('') : '<div class="empty"><strong>No trip updates yet.</strong><p class="small" style="margin-top:8px">A change to your pickup information will appear here. You can always check the latest estimate.</p></div>'}</section>`;
 }
 function contactPanel(trip) {
@@ -83,7 +94,7 @@ function dispatchCommunications() {
   return `<section class="card" aria-labelledby="communications-heading"><div class="card-header"><h2 id="communications-heading">Communication record</h2><span class="section-count">${notices.length}</span></div><p class="small">Delivery outcomes below are explicitly simulated. Sending is not proof that the rider received a message.</p>${notices.length ? notices.map(n => {
     const a = n.attempts.at(-1);
     let actions = a.outcome === 'sent' ? `<button id="deliver-${n.id}" data-outcome="delivered" data-notice="${n.id}" ${viewRevision()}>Mark delivered</button><button id="unreachable-${n.id}" data-outcome="unreachable" data-notice="${n.id}" ${viewRevision()}>Mark unreachable</button>` : a.outcome === 'delivered' ? `<button id="external-ack-${n.id}" data-outcome="acknowledged" data-notice="${n.id}" ${viewRevision()}>Record external acknowledgement</button>` : a.outcome === 'unreachable' ? `<button id="retry-${n.id}" data-retry="${n.id}" ${viewRevision()}>Retry on ${channelLabel(state.channel)}</button>` : '';
-    return `<article class="queue-item"><div class="notice-meta"><span class="trip-id">${n.id} · ${n.tripId === 'return' ? 'Return' : 'Outbound'}</span><span class="pill ${a.outcome}">${a.outcome}</span></div><h3 style="margin-top:12px">${noticeTitle(n)}</h3>${noticeBody(n)}<ol class="history">${n.attempts.map(at => `<li>${channelLabel(at.channel)} · sent ${formatTime(at.sentAt)} · ${outcomeLabel(at.outcome)}${at.deliveredAt === null ? '' : ` · delivered ${formatTime(at.deliveredAt)}`}${at.acknowledgedAt === null ? '' : ` · acknowledged ${formatTime(at.acknowledgedAt)}`}${at.unreachableAt === null ? '' : ` · unreachable ${formatTime(at.unreachableAt)}`}</li>`).join('')}</ol><div class="button-row">${actions}</div></article>`;
+    return `<article class="queue-item"><div class="notice-meta"><span class="trip-id">${n.id} · ${n.tripId === 'return' ? 'Return' : 'Outbound'}</span><span class="pill ${a.outcome}">${a.outcome}</span></div><p class="small">${n.kind === 'delay' ? 'Identified' : 'Created'} ${formatTime(n.createdAt)}</p><h3 style="margin-top:12px">${noticeTitle(n)}</h3>${noticeBody(n)}${attemptHistory(n)}<div class="button-row">${actions}</div></article>`;
   }).join('') : '<div class="empty">No communication events yet. Save a delayed estimate or send an accepted-change notice.</div>'}</section>`;
 }
 function dispatchRequests() {
@@ -139,7 +150,7 @@ document.addEventListener('change', event => {
   if (form) form.dispatchEvent(new Event('input', { bubbles: true }));
 });
 document.addEventListener('click', event => {
-  const button = event.target.closest('button'); if (!button) return;
+  const button = event.target.closest('button'); if (!button || button.getAttribute('aria-disabled') === 'true') return;
   if (button.dataset.view) { view = button.dataset.view; rememberView(); render(); return; }
   if (button.dataset.leg) { selected = button.dataset.leg; rememberView(); render(); return; }
   if (button.dataset.refresh) { drafts.delete(button.dataset.refresh); render(); announce('Form refreshed with the latest demo values.'); return; }

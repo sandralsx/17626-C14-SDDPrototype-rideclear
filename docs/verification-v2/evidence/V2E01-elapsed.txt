@@ -1,0 +1,90 @@
+Browser tab: 7, Title: "RideClear · Prototype V2", URL: "http://127.0.0.1:4183/".
+0 AXWebArea RideClear · Prototype V2, URL: 127.0.0.1:4183/
+	1 link Description: Skip to trip information, Value: 127.0.0.1:4183/#main
+	2 container
+		3 link Description: RideClear home, Value: 127.0.0.1:4183/
+		4 container Demo view
+			5 checkbox Rider view, Value: 1, ID: view-rider
+			6 checkbox Dispatch view, Value: 0, ID: view-dispatch
+		7 text Prototype V2
+	8 text Demo service
+	9 text Fictional trips · simulated messages · no real ride changes
+	10 container main
+		11 text SATURDAY, NOVEMBER 7
+		12 heading Your rides today, Value: 1, ID: page-title
+			88 text Your rides today
+		89 text Know your pickup time. Stay informed if it changes.
+		15 text Demo service time · Eastern
+		90 text 5:35 PM
+		17 container Today's trip legs
+			18 text TODAY'S TRIPS
+			19 container trip-list
+				91 checkbox Outbound Riverside Community Center 9:00 AM – 9:20 AM Estimate needs updating, Value: 0, ID: leg-outbound
+					92 text Outbound
+					93 text Riverside Community Center
+					94 text 9:00 AM – 9:20 AM
+					95 text Estimate needs updating
+				96 checkbox Return Maple Street home 5:00 PM – 5:30 PM Estimate needs updating, Value: 1, ID: leg-return
+					97 text Return
+					98 text Maple Street home
+					99 text 5:00 PM – 5:30 PM
+					100 text Estimate needs updating
+			30 text One day. Two directions.
+			31 text Your original pickup window stays visible, even when an estimate changes.
+		32 container content
+			101 container Your pickup details
+				102 text RETURN PICKUP
+				103 heading Your pickup details, Value: 2, ID: pickup-heading
+					104 text Your pickup details
+				105 text RC-105
+				106 container
+					107 text Pickup
+					108 text Riverside Community Center
+					109 text Destination
+					110 text Maple Street home
+				111 text Original scheduled pickup window
+				112 text 5:00 PM – 5:30 PM
+				113 text Last recorded estimated arrival
+				114 text 5:15 PM
+				115 text Estimate needs updating
+				116 text The recorded estimate has passed. Arrival is not confirmed. Contact dispatch for a new estimate.
+				117 text Vehicle
+				118 text Accessible van 18
+				119 text Vehicle status
+				120 text Scheduled
+				121 container
+					122 text Estimate updated at  8:40 AM  · Eastern
+					123 text Both the estimate and the service time are simulated.
+			124 container Trip updates
+				125 heading Trip updates, Value: 2, ID: notices-heading
+					126 text Trip updates
+				127 text 0
+				128 text No trip updates yet.
+				129 text A change to your pickup information will appear here. You can always check the latest estimate.
+			130 container Need a different plan?
+				131 heading Need a different plan?, Value: 2, ID: contact-heading
+					132 text Need a different plan?
+				133 text If the revised time will not work, let dispatch know. This does not change your ride automatically.
+				134 container contact-form
+					135 text Message to dispatch
+					136 text entry area (settable) Message to dispatch, ID: contact-message
+					137 text 1–500 characters · for your return trip
+					138 button Send demo request, ID: contact-submit
+		77 container
+			78 button (expanded) Demo controls & sample scenarios, Secondary Actions: Collapse
+				79 text Demo controls & sample scenarios
+			80 text Replace the fictional session with a sample case. No message is sent outside this demo.
+			81 button Reset normal trips
+			82 button Load early delay
+			83 button Load late discovery
+			84 button Load unknown ETA
+			85 button Load elapsed ETA
+			86 button Load late delivery
+			87 text Saved within this browser profile and site only. Open this URL in another tab to compare rider and dispatch views. Different devices have separate sessions.
+	139 text Sample scenario loaded. Previous fictional records were replaced.
+	73 container
+		74 text RideClear / A3 V2
+		140 text Same-browser shared demo · revision 1
+		76 text Estimates are simulated, not a pickup guarantee.
+
+The focused UI element is 85 button Load elapsed ETA

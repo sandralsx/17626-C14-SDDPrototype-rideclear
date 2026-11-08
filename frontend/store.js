@@ -1,6 +1,6 @@
 import { createInitialState, applyCommand } from './domain.js';
-export const STORAGE_KEY = 'rideclear:a3:v1:state';
-const LOCK_NAME = 'rideclear-a3-v1-state';
+export const STORAGE_KEY = 'rideclear:a3:v2:state';
+const LOCK_NAME = 'rideclear-a3-v2-state';
 const clone = x => structuredClone(x);
 function browserStorage() { try { return globalThis.localStorage; } catch { return null; } }
 function parse(raw) {

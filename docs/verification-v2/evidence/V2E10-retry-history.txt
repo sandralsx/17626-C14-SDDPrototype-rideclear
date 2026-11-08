@@ -1,0 +1,129 @@
+Browser tab: 7, Title: "RideClear · Prototype V2", URL: "http://127.0.0.1:4183/".
+0 AXWebArea RideClear · Prototype V2, URL: 127.0.0.1:4183/
+	1 link Description: Skip to trip information, Value: 127.0.0.1:4183/#main
+	2 container
+		3 link Description: RideClear home, Value: 127.0.0.1:4183/
+		4 container Demo view
+			5 checkbox Rider view, Value: 0, ID: view-rider
+			6 checkbox Dispatch view, Value: 1, ID: view-dispatch
+		7 text Prototype V2
+	8 text Demo service
+	9 text Fictional trips · simulated messages · no real ride changes
+	10 container main
+		11 text SATURDAY, NOVEMBER 7
+		12 heading Keep riders informed, Value: 1, ID: page-title
+			88 text Keep riders informed
+		89 text One trip record. Clear updates. A visible communication trail.
+		15 text Demo service time · Eastern
+		90 text 4:50 PM
+		17 container Today's trip legs
+			18 text TODAY'S TRIPS
+			19 container trip-list
+				91 checkbox Outbound Riverside Community Center 9:00 AM – 9:20 AM Trip completed, Value: 0, ID: leg-outbound
+					92 text Outbound
+					93 text Riverside Community Center
+					94 text 9:00 AM – 9:20 AM
+					95 text Trip completed
+				96 checkbox Return Maple Street home 5:00 PM – 5:30 PM Pickup delayed, Value: 1, ID: leg-return
+					97 text Return
+					98 text Maple Street home
+					99 text 5:00 PM – 5:30 PM
+					100 text Pickup delayed
+			30 text One day. Two directions.
+			31 text Your original pickup window stays visible, even when an estimate changes.
+		32 container content
+			101 container Update pickup information
+				102 text RETURN TRIP
+				103 heading Update pickup information, Value: 2, ID: edit-heading
+					104 text Update pickup information
+				105 container
+					106 text Original window  5:00 PM – 5:30 PM  stays fixed.
+				107 container trip-form
+					108 text Estimated arrival · Eastern
+					109 time field (settable) Estimated arrival · Eastern, Value: 17:45, ID: edit-eta
+						110 container
+							111 stepper
+							112 stepper
+						113 pop up button 显示时间选择器 显示时间选择器
+					114 text Leave blank if no estimate is available.
+					115 text Vehicle status
+					116 pop up button (collapsed, settable) Vehicle status, Value: On the way, ID: edit-status, Secondary Actions: Expand
+						117 menu
+							118 Scheduled
+							119 (selected) On the way
+							120 Vehicle arrived
+							121 Trip completed
+					122 container
+						123 checkbox (settable, integer) Description: Driver accepted this pickup-information change (simulated), Value: 0, ID: driver-accepted
+						124 text Driver accepted this pickup-information change  (simulated)
+					125 text A predicted delay triggers its own notice, even without driver acceptance.
+					126 button Save pickup update, ID: save-trip
+					127 button Send change notice, ID: send-change
+				128 container clock-form
+					129 text Demo service time · Eastern
+					130 time field (settable) Demo service time · Eastern, Value: 16:50, ID: demo-time
+						131 container
+							132 stepper
+							133 stepper
+						134 pop up button 显示时间选择器 显示时间选择器
+					135 text Move forward to test when a delay is identified.
+					136 button Set demo time, ID: set-clock
+				137 container channel-form
+					138 text Rider's preferred channel
+					139 pop up button (collapsed, settable) Rider's preferred channel, Value: Phone (simulated), ID: channel, Secondary Actions: Expand
+						140 menu
+							141 SMS (simulated)
+							142 (selected) Phone (simulated)
+							143 Email (simulated)
+					144 button Save channel preference, ID: save-channel
+			145 container Communication record
+				146 heading Communication record, Value: 2, ID: communications-heading
+					147 text Communication record
+				148 text 1
+				149 text Delivery outcomes below are explicitly simulated. Sending is not proof that the rider received a message.
+				150 container
+					151 text N1 · Return sent Identified 4:50 PM
+					152 heading Your pickup is delayed, Value: 3
+						153 text Your pickup is delayed
+					154 text Return trip · Recorded estimated arrival 5:45 PM.
+					155 text Original window 5:00 PM – 5:30 PM. Discovery before window end. Window end 5:30 PM. Delivery not yet recorded · before-window deadline pending. Recorded delivery is not proof of acknowledgement or understanding.
+					156 content list
+						157 container
+							158 AXListMarker 1. 
+							159 text SMS · attempt 1
+							160 text Sent 4:50 PM
+							161 text Delivered not recorded
+							162 text Acknowledged not recorded
+							163 text Unreachable 4:50 PM
+						164 container
+							165 AXListMarker 2. 
+							166 text Phone · attempt 2
+							167 text Sent 4:50 PM
+							168 text Delivered not recorded
+							169 text Acknowledged not recorded
+							170 text Unreachable not recorded
+					171 button Mark delivered, ID: deliver-N1
+					172 button Mark unreachable, ID: unreachable-N1
+			173 container Rider requests
+				174 heading Rider requests, Value: 2, ID: requests-heading
+					175 text Rider requests
+				176 text 0 open
+				177 text No rider requests yet.
+		77 container
+			78 button (expanded) Demo controls & sample scenarios, Secondary Actions: Collapse
+				79 text Demo controls & sample scenarios
+			80 text Replace the fictional session with a sample case. No message is sent outside this demo.
+			81 button Reset normal trips
+			82 button Load early delay
+			83 button Load late discovery
+			84 button Load unknown ETA
+			85 button Load elapsed ETA
+			86 button Load late delivery
+			87 text Saved within this browser profile and site only. Open this URL in another tab to compare rider and dispatch views. Different devices have separate sessions.
+	178 text New simulated send attempt recorded. Previous attempt remains in history.
+	73 container
+		74 text RideClear / A3 V2
+		179 text Same-browser shared demo · revision 16
+		76 text Estimates are simulated, not a pickup guarantee.
+
+The focused UI element is 0 AXWebArea RideClear · Prototype V2, URL: 127.0.0.1:4183/

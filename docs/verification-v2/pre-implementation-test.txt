@@ -1,0 +1,25 @@
+file:///C:/Users/liushuxin/Documents/Codex/2026-11-07/https-chatgpt-com-share-6aef8831-27c0/outputs/a3-v2/tests/v2-requirements.test.js:3
+import { createInitialState, applyCommand, tripCondition, noticeTiming } from '../frontend/domain.js';
+                                                          ^^^^^^^^^^^^
+SyntaxError: The requested module '../frontend/domain.js' does not provide an export named 'noticeTiming'
+    at #asyncInstantiate (node:internal/modules/esm/module_job:455:21)
+    at async ModuleJob.run (node:internal/modules/esm/module_job:553:5)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.22.1
+✖ tests\v2-requirements.test.js (183.8794ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 200.4084
+
+✖ failing tests:
+
+test at tests\v2-requirements.test.js:1:1
+✖ tests\v2-requirements.test.js (183.8794ms)
+  'test failed'
