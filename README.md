@@ -1,4 +1,4 @@
-# RideClear — 17-626 Assignment3
+# 17626-C14-SDDPrototype-rideclear
 
 **Submission snapshot: Prototype V1 and V2, requirements analysis, traceability, Spec Kit artifacts, and the student-revised English Learning Log.** Scope: Trip Status, ETA and Delay Communication, based on the three team HW2 models and checked Shuxin HW1 interview evidence. The GitHub repository remains private; both fictional demo pages are public.
 
@@ -6,8 +6,8 @@
 
 | Component | Link / actual state |
 | --- | --- |
-| GitHub Version1 | [Preserved v1](https://github.com/sandralsx/17626-a3-rideclear/tree/v1) |
-| GitHub Version2 | [Current V2 submission](https://github.com/sandralsx/17626-a3-rideclear/tree/main) · [Preserved v2 prototype release](https://github.com/sandralsx/17626-a3-rideclear/tree/v2), descendant of V1 in the same repository |
+| GitHub Version1 | [Preserved v1](https://github.com/sandralsx/17626-C14-SDDPrototype-rideclear/tree/v1) |
+| GitHub Version2 | [Current V2 submission](https://github.com/sandralsx/17626-C14-SDDPrototype-rideclear/tree/main) · [Preserved v2 prototype release](https://github.com/sandralsx/17626-C14-SDDPrototype-rideclear/tree/v2), descendant of V1 in the same repository |
 | Prototype V1 URL | [Open V1](https://rideclear-a3-v1-shuxin-20261107.tomato-star.chatgpt.site) |
 | Prototype V2 URL | [Open V2](https://rideclear-a3-v2-shuxin-20261107.tomato-star.chatgpt.site) |
 | Requirements Analysis and Learning Log | [Learning Log — student-revised English version](docs/learning-log.md), [V1 goal analysis](docs/goal-model.md), [V2 model revision](docs/goal-model-v2.md), [V1 RTM](docs/traceability-v1.md), [V2 RTM](docs/traceability-v2.md), [technical change register](docs/v2-requirements-change-register.md). **Student revision of the Learning Log is complete; teammates can review the current materials.** |

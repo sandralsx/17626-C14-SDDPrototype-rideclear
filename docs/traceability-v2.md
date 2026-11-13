@@ -27,14 +27,14 @@ FR-009/011/013/014/016 retain fictional-only operation, immutable snapshots, man
 
 ## Immutable V2 implementation anchors
 
-- [export function tripCondition](https://github.com/sandralsx/17626-a3-rideclear/blob/89d49042a599c1c1ef0eb2ae0b4c8a41976468ce/frontend/domain.js#L25)
-- [export function noticeTiming](https://github.com/sandralsx/17626-a3-rideclear/blob/89d49042a599c1c1ef0eb2ae0b4c8a41976468ce/frontend/domain.js#L36)
-- [export function applyCommand](https://github.com/sandralsx/17626-a3-rideclear/blob/89d49042a599c1c1ef0eb2ae0b4c8a41976468ce/frontend/domain.js#L93)
-- [function tripPanel](https://github.com/sandralsx/17626-a3-rideclear/blob/89d49042a599c1c1ef0eb2ae0b4c8a41976468ce/frontend/app.js#L47)
-- [function noticeBody](https://github.com/sandralsx/17626-a3-rideclear/blob/89d49042a599c1c1ef0eb2ae0b4c8a41976468ce/frontend/app.js#L57)
-- [function attemptHistory](https://github.com/sandralsx/17626-a3-rideclear/blob/89d49042a599c1c1ef0eb2ae0b4c8a41976468ce/frontend/app.js#L69)
-- [function riderNotices](https://github.com/sandralsx/17626-a3-rideclear/blob/89d49042a599c1c1ef0eb2ae0b4c8a41976468ce/frontend/app.js#L73)
-- [function restoreFocus](https://github.com/sandralsx/17626-a3-rideclear/blob/89d49042a599c1c1ef0eb2ae0b4c8a41976468ce/frontend/app.js#L27)
-- [export function createStore](https://github.com/sandralsx/17626-a3-rideclear/blob/89d49042a599c1c1ef0eb2ae0b4c8a41976468ce/frontend/store.js#L14)
+- [export function tripCondition](https://github.com/sandralsx/17626-C14-SDDPrototype-rideclear/blob/89d49042a599c1c1ef0eb2ae0b4c8a41976468ce/frontend/domain.js#L25)
+- [export function noticeTiming](https://github.com/sandralsx/17626-C14-SDDPrototype-rideclear/blob/89d49042a599c1c1ef0eb2ae0b4c8a41976468ce/frontend/domain.js#L36)
+- [export function applyCommand](https://github.com/sandralsx/17626-C14-SDDPrototype-rideclear/blob/89d49042a599c1c1ef0eb2ae0b4c8a41976468ce/frontend/domain.js#L93)
+- [function tripPanel](https://github.com/sandralsx/17626-C14-SDDPrototype-rideclear/blob/89d49042a599c1c1ef0eb2ae0b4c8a41976468ce/frontend/app.js#L47)
+- [function noticeBody](https://github.com/sandralsx/17626-C14-SDDPrototype-rideclear/blob/89d49042a599c1c1ef0eb2ae0b4c8a41976468ce/frontend/app.js#L57)
+- [function attemptHistory](https://github.com/sandralsx/17626-C14-SDDPrototype-rideclear/blob/89d49042a599c1c1ef0eb2ae0b4c8a41976468ce/frontend/app.js#L69)
+- [function riderNotices](https://github.com/sandralsx/17626-C14-SDDPrototype-rideclear/blob/89d49042a599c1c1ef0eb2ae0b4c8a41976468ce/frontend/app.js#L73)
+- [function restoreFocus](https://github.com/sandralsx/17626-C14-SDDPrototype-rideclear/blob/89d49042a599c1c1ef0eb2ae0b4c8a41976468ce/frontend/app.js#L27)
+- [export function createStore](https://github.com/sandralsx/17626-C14-SDDPrototype-rideclear/blob/89d49042a599c1c1ef0eb2ae0b4c8a41976468ce/frontend/store.js#L14)
 
 Public-deployment evidence V2E15..17 repeats the elapsed/timing/focus paths; V2E18 confirms the preserved V1 page. These supplement the local V2E01..14 records.
