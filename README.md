@@ -1,6 +1,6 @@
 # 17626-C14-SDDPrototype-rideclear
 
-**Submission snapshot: Prototype V1 and V2, requirements analysis, traceability, Spec Kit artifacts, and the student-revised English Learning Log.** Scope: Trip Status, ETA and Delay Communication, based on the three team HW2 models and checked Shuxin HW1 interview evidence. The GitHub repository remains private; both fictional demo pages are public.
+**Submission snapshot: Prototype V1 and V2, requirements analysis, traceability, Spec Kit artifacts, and the student-revised English Learning Log.** Scope: Trip Status, ETA and Delay Communication, based on the three team HW2 models and checked Shuxin HW1 interview evidence. The GitHub repository and both fictional demo pages are public.
 
 ## Required deliverable navigation
 
@@ -20,7 +20,7 @@ The assignment submits one repository URL. The technical components are preserve
 - [JasonYao-QY](https://github.com/JasonYao-QY) — teammate.
 - [ALT-JS](https://github.com/ALT-JS) — teammate.
 
-The repository remains private. Teammates must accept their GitHub collaboration invitations to access it. Grading staff also need appropriate repository access; the public prototype URLs are separate from repository access.
+The repository was originally created privately for the assignment and made public at the owner's explicit request on 2026-11-13 so grading staff can read the submission without an invitation. Teammates must accept collaboration invitations for write access; read access is public. The original private-repository instruction remains documented in the assignment source.
 
 ## Compare V1 and V2
 
@@ -54,6 +54,6 @@ node scripts/build.mjs
 node scripts/serve.mjs
 ```
 
-Only five files built from frontend/ are public assets. Original interviews, assignment PDF, models and technical documents remain in the private repository and local academic deliverable package.
+Only five files built from frontend/ are public assets. Original interviews, the assignment PDF, models and technical documents are included in this public repository and the local academic deliverable package. The separately hosted prototype build contains only the application assets.
 
 AI assistance was used for technical artifacts and the initial Learning Log draft. On2026-11-08 the student supplied a subsequent instructor email update: “Learning Log can be written by AI, but revised by person.” The student has confirmed completing their revision of the current log, following that updated drafting/revision arrangement. Earlier versioned documents retain the original PDF authorship rule as historical records; they have not been rewritten retrospectively. The preserved v1/v2 tags and prototype code/deployments are unchanged by these local documentation updates.
