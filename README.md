@@ -1,18 +1,26 @@
 # RideClear — 17-626 Assignment3
 
-**Current stage: Step5 technical work complete — Prototype V2.** Scope: Trip Status, ETA and Delay Communication, based on the three team HW2 models and checked Shuxin HW1 interview evidence. The GitHub repository remains private; both fictional demo pages are public.
+**Submission snapshot: Prototype V1 and V2, requirements analysis, traceability, Spec Kit artifacts, and the student-revised English Learning Log.** Scope: Trip Status, ETA and Delay Communication, based on the three team HW2 models and checked Shuxin HW1 interview evidence. The GitHub repository remains private; both fictional demo pages are public.
 
 ## Required deliverable navigation
 
 | Component | Link / actual state |
 | --- | --- |
 | GitHub Version1 | [Preserved v1](https://github.com/sandralsx/17626-a3-rideclear/tree/v1) |
-| GitHub Version2 | [Preserved v2](https://github.com/sandralsx/17626-a3-rideclear/tree/v2), descendant in the same repository |
+| GitHub Version2 | [Current V2 submission](https://github.com/sandralsx/17626-a3-rideclear/tree/main) · [Preserved v2 prototype release](https://github.com/sandralsx/17626-a3-rideclear/tree/v2), descendant of V1 in the same repository |
 | Prototype V1 URL | [Open V1](https://rideclear-a3-v1-shuxin-20261107.tomato-star.chatgpt.site) |
 | Prototype V2 URL | [Open V2](https://rideclear-a3-v2-shuxin-20261107.tomato-star.chatgpt.site) |
-| Requirements Analysis and Learning Log | [V1 goal analysis](docs/goal-model.md), [V2 model revision](docs/goal-model-v2.md), [V1 RTM](docs/traceability-v1.md), [V2 RTM](docs/traceability-v2.md), [technical change register](docs/v2-requirements-change-register.md). **learning-log.md must still be independently authored by the student.** |
+| Requirements Analysis and Learning Log | [Learning Log — student-revised English version](docs/learning-log.md), [V1 goal analysis](docs/goal-model.md), [V2 model revision](docs/goal-model-v2.md), [V1 RTM](docs/traceability-v1.md), [V2 RTM](docs/traceability-v2.md), [technical change register](docs/v2-requirements-change-register.md). **Student revision of the Learning Log is complete; teammates can review the current materials.** |
 
-The assignment submits one repository URL. The technical components are preserved and linked here; no missing student Learning Log or Step6 response is fabricated. This README does not claim the whole assignment is finished.
+The assignment submits one repository URL. The technical components are preserved and linked here. The current English Learning Log includes the student's revisions, confirmed on 2026-11-12, under the student-reported instructor update allowing AI drafting followed by personal revision. The student confirmed that they and their teammates operated V1 and V2. AI-assisted technical checks remain distinguished from procedures personally repeated by the team. This default-branch submission includes the current log and subsequent documentation updates. The preserved v1/v2 tags retain the original prototype releases; current submission documents are linked from this README. Unresolved verification and stakeholder questions remain explicitly recorded.
+
+## Team GitHub accounts
+
+- [Shuxin Liu / sandralsx](https://github.com/sandralsx) — repository owner.
+- [JasonYao-QY](https://github.com/JasonYao-QY) — teammate.
+- [ALT-JS](https://github.com/ALT-JS) — teammate.
+
+The repository remains private. Teammates must accept their GitHub collaboration invitations to access it. Grading staff also need appropriate repository access; the public prototype URLs are separate from repository access.
 
 ## Compare V1 and V2
 
@@ -30,6 +38,7 @@ Normal, early-delay, late-discovery and unknown fixtures remain available. Reset
 - [Assignment requirements](docs/assignment-requirements.md), [original model/source crosswalk](docs/source-crosswalk.csv), [V1 model](docs/goal-model.md), [V2 model](docs/goal-model-v2.md)
 - [Spec Kit constitution](.specify/memory/constitution.md), [original workflow receipt](docs/workflow-receipt.md)
 - [V1 spec/plan/tasks](specs/001-trip-status/spec.md), [V1 evaluation/findings](docs/evaluation-v1/README.md)
+- Active Spec Kit feature: `specs/002-truthful-updates` ([selection](.specify/feature.json)).
 - [V2 spec](specs/002-truthful-updates/spec.md), [plan](specs/002-truthful-updates/plan.md), [tasks](specs/002-truthful-updates/tasks.md), [data model](specs/002-truthful-updates/data-model.md), [contract](specs/002-truthful-updates/contracts/ui-and-state.md)
 - [V2 RTM](docs/traceability-v2.md) · [CSV](docs/traceability-v2.csv), [verification/evidence](docs/verification-v2/README.md), [release](docs/release-v2.md)
 
@@ -47,4 +56,4 @@ node scripts/serve.mjs
 
 Only five files built from frontend/ are public assets. Original interviews, assignment PDF, models and technical documents remain in the private repository and local academic deliverable package.
 
-AI assistance was used for technical artifacts. Per the assignment PDF p5, the student must independently write learning-log.md and all Step6 examples/answers without AI assistance. No such log or answers were generated.
+AI assistance was used for technical artifacts and the initial Learning Log draft. On2026-11-08 the student supplied a subsequent instructor email update: “Learning Log can be written by AI, but revised by person.” The student has confirmed completing their revision of the current log, following that updated drafting/revision arrangement. Earlier versioned documents retain the original PDF authorship rule as historical records; they have not been rewritten retrospectively. The preserved v1/v2 tags and prototype code/deployments are unchanged by these local documentation updates.

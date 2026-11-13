@@ -2,6 +2,8 @@
 
 **Branch:** codex/a3-v2 · **Date:** 2026-11-07 · **Status:** revised specification before implementation
 
+**Documentation review (2026-11-12):** implementation details were moved to the [UI and state contract](contracts/ui-and-state.md), preserving the intended behavior and IDs. This later editorial review is separate from the original spec-first V2 development recorded in Git history.
+
 Input: Step4 deployed-V1 findings RQ-01, RQ-02 and ID-01 in [findings](../../docs/evaluation-v1/findings.md). The original [V1 spec](../001-trip-status/spec.md) and immutable v1 tag remain preserved. This is an AI-assisted technical revision, not Learning Log authorship. No new stakeholder interview or approval is claimed.
 
 ## User Scenarios & Testing
@@ -26,8 +28,8 @@ SJ21 requests notice before the pickup window expires. SF25 asks to distinguish 
 
 SD25 and SJ34 support accessible independent use. Existing V1 AS-16 and UI contract already required preserved focus; ID-01 violates them.
 
-- **AS-24:** Focus delivered-notice Acknowledge using Tab, activate Return. The action succeeds once, its stable control remains focusable and labeled **Update acknowledged**, marked aria-disabled=true. Focus stays on that same control. Re-activation makes no new write or timestamp; the next Tab continues to the next operable control. Announce success through the persistent polite status region. This corrects an existing implementation defect rather than claiming a new stakeholder need.
-- **AS-25:** A same-origin update preserves an active contact draft/focus, and a stale submission is rejected. Existing V1 window, unknown, acceptance-gate, receipt, history, reload, temporary-mode and no-real-action requirements remain in force. V2 storage is separately named; V1 sessions, deployment and tag remain untouched.
+- **AS-24:** Focus delivered-notice Acknowledge using Tab, activate Return. The action succeeds once; focus remains on the same acknowledgement control, now labeled **Update acknowledged**. Its completed state and the success message are perceivable by assistive-technology users without moving focus. Re-activation makes no new write or timestamp; the next Tab continues to the next operable control. This corrects an existing implementation defect rather than claiming a new stakeholder need.
+- **AS-25:** A same-origin update preserves an active contact draft/focus, and a stale submission is rejected. Existing V1 window, unknown, acceptance-gate, receipt, history, reload, temporary-mode and no-real-action requirements remain in force. V2 actions do not change V1 saved sessions; V1 deployment and tag remain untouched.
 
 ## Requirements
 
@@ -47,7 +49,7 @@ Stable V1 FR-001..016 / R-01..08 and their acceptance scenarios remain applicabl
 | FR-015 clarified | Retain snapshots and historical attempts. Timing presentation is derived from recorded event timestamps and current explicit demo clock; subsequent acknowledgement cannot rewrite delivery/discovery timing. | G03/G08; RQ-02 | AS-21..23 |
 | **FR-017 new** | For nonterminal legs with known ETA, now>ETA means elapsed: show Estimate needs updating, last recorded ETA, as-of, arrival not confirmed and contact-dispatch direction. Do not display a current within-window/ahead/delayed prediction badge in place of this usability warning. Unknown/terminal retain their meanings. now=ETA is not elapsed. Do not infer a numeric freshness SLA. | G02 supports G07; SJ31/34; RQ-01 | AS-18..20 |
 | **FR-018 new** | Label discovery/creation, every attempt's sent, delivered, acknowledged and unreachable times; absent timestamps say not recorded. For delay notices, strict <windowEnd is before. Separately derive early/late discovery and delivery recorded before/at-or-after end, or pending/no recorded before-deadline evidence. Missed deadline or unreachable requires manual follow-up, with no automatic ride decision. Both views use the same result. | G03 depends on G08 delivery evidence; SJ21/SF25; RQ-02 | AS-21..23 |
-| **FR-019 clarification** | Acknowledge retains a stable, focusable named control after success; aria-disabled state prevents duplicate actions. Next keyboard navigation remains logical; persistent live region announces the result. | G06 constrains G03/G08; SD25/SJ34; ID-01 | AS-24 |
+| **FR-019 clarification** | After acknowledgement, retain focus on the same named control and make its completed state and success message perceivable without moving focus. Prevent duplicate acknowledgement or timestamp changes; subsequent keyboard navigation remains logical. | G06 constrains G03/G08; SD25/SJ34; ID-01 | AS-24 |
 
 FR-009 fictional-only, FR-011 immutable snapshots, FR-013 manual decisions, FR-014 persistence/temporary warning and FR-016 preserved engineering chain remain unchanged. Nothing adds real providers, GPS prediction, automatic rescheduling, accounts or finance integrations.
 
